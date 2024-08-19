@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp">
+
+    <com.zipow.videobox.view.AvatarView
+        android:id="@+id/avatarView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:contentDescription="@string/zm_accessibility_contact_avatar_75690" />
+
+    <TextView
+        android:id="@+id/alertTitle"
+        style="@style/ZMTextView.Large.DialogTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingBottom="12dip"
+        android:text="Title text " />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginLeft="15dip"
+        android:layout_marginRight="15dip"
+        android:layout_marginBottom="12dip"
+        style="@style/ZMCheckbox.Normal"
+        android:textColor="@color/zm_v2_txt_secondary"
+        android:text="@string/zm_record_allow_all_msg_479912" />
+</LinearLayout>

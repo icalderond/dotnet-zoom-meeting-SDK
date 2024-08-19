@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zoomEventsItemLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:contentDescription="@null"
+        android:gravity="center_vertical"
+        android:src="@drawable/zm_settings_events_icon" />
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/zm_margin_small_6dp"
+        android:gravity="center_vertical"
+        android:text="@string/zm_ze_meeting_info_title_503540"
+        android:textColor="@color/zm_v2_txt_secondary"
+        android:textSize="@dimen/zm_ui_kit_text_size_13sp" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="4dp"
+        android:layout_height="4dp"
+        android:layout_marginStart="@dimen/zm_margin_smaller_size"
+        android:layout_marginEnd="@dimen/zm_margin_smaller_size"
+        android:contentDescription="@null"
+        android:gravity="center_vertical"
+        android:src="@drawable/zm_dot_select" />
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:id="@+id/zoomEventStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:textColor="@color/zm_v2_txt_secondary"
+        android:textSize="@dimen/zm_ui_kit_text_size_13sp"
+        tools:text="@string/zm_ze_meeting_info_in_progress_503540" />
+
+</LinearLayout>

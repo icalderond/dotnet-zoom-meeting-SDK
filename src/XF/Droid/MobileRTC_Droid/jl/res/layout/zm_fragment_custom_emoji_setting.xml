@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar.Dark"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        tools:layout_height="56dp">
+
+        <Button
+            android:id="@+id/btnClose"
+            style="@style/ZmTitleBarAction"
+            android:text="@string/zm_btn_close"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:focusable="true">
+
+            <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+                android:id="@+id/txtAction"
+                android:textStyle="bold"
+                android:textSize="@dimen/zm_font_large_size"
+                android:textColor="@color/zm_v1_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:singleLine="true"
+                android:focusable="false"
+                android:text="@string/zm_custom_emoji_edit_title_506846"
+                />
+
+            <TextView
+                android:id="@+id/txtAppName"
+                android:textSize="@dimen/zm_font_smallest_size"
+                android:textColor="@color/zm_v1_white"
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_custom_emoji_edit_subtitle_506846"
+                android:focusable="false"
+                />
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        tools:itemCount="5"
+        tools:listitem="@layout/zm_custom_emoji_setting_item"/>
+
+    <TextView
+        android:id="@+id/emptyListTipsText"
+        style="@style/ZmTextView.Content.Primary.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:paddingTop="@dimen/zm_margin_small"
+        android:paddingBottom="@dimen/zm_margin_small"
+        android:text="@string/zm_custom_emoji_edit_empty_list_tips_506846"/>
+
+    <Button
+        android:id="@+id/deleteButton"
+        style="@style/ZmButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@android:string/cancel"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:background="@drawable/zm_ic_custom_emoji_setting_delete_bg"/>
+
+</LinearLayout>

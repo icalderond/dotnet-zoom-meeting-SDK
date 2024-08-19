@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/zm_window_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- for content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <!-- Title Bar -->
+        <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZmTitleBar.Dark"
+            zoom:zm_leftButton="@+id/left_layout"
+            zoom:zm_rightButton="@+id/right_layout"
+            zoom:zm_title="@+id/txt_titles_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingDefaultResource">
+
+            <LinearLayout
+                android:id="@+id/left_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_close"
+                    style="@style/ZmImageView.Compat"
+                    zoom:srcCompat="@drawable/zm_ic_btn_back_white"
+                    android:background="@drawable/zm_v2_bg_small_text_btn_dark"
+                    android:contentDescription="@string/zm_close_btn_acc_361813" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/right_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btn_add"
+                    style="@style/ZmImageView.Compat"
+                    zoom:srcCompat="@drawable/zm_ic_btn_add_white"
+                    android:background="@drawable/zm_v2_bg_small_text_btn_dark"
+                    android:contentDescription="@string/zm_close_btn_acc_549633" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/txt_titles_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <us.zoom.uicommon.widget.view.ZMCommonTextView
+                    android:id="@+id/txt_title"
+                    style="@style/ZmTitleBarTitle.Dark"
+                    android:text="@string/zm_clips_453189"
+                    android:layout_gravity="center"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    tools:text="Clips"/>
+
+            </LinearLayout>
+
+        </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:min="0"
+            android:layout_height="@dimen/zm_horizentol_progress_bar_height"
+            android:layout_width="match_parent"/>
+
+        <FrameLayout
+            android:id="@+id/webview_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+</FrameLayout>

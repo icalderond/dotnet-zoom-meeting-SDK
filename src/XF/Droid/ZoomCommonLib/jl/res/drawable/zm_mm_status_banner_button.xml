@@ -1,0 +1,13 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <group>
+    <clip-path
+        android:pathData="M12.5,16C12.5,16.725 11.912,17.313 11.188,17.313C10.463,17.313 9.875,16.725 9.875,16C9.875,15.275 10.463,14.688 11.188,14.688C11.912,14.688 12.5,15.275 12.5,16ZM17.313,16C17.313,16.725 16.725,17.313 16,17.313C15.275,17.313 14.688,16.725 14.688,16C14.688,15.275 15.275,14.688 16,14.688C16.725,14.688 17.313,15.275 17.313,16ZM20.813,17.313C21.537,17.313 22.125,16.725 22.125,16C22.125,15.275 21.537,14.688 20.813,14.688C20.088,14.688 19.5,15.275 19.5,16C19.5,16.725 20.088,17.313 20.813,17.313Z"/>
+    <path
+        android:pathData="M9,9h14v14h-14z"
+        android:fillColor="@color/zm_im_my_status_banner_button"/>
+  </group>
+</vector>

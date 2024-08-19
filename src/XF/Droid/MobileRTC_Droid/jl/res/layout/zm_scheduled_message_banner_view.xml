@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_v2_alert_view_info_bg"
+    android:paddingHorizontal="@dimen/zm_margin_smaller_size"
+    android:paddingVertical="@dimen/zm_margin_smallest">
+    <ImageView
+        android:id="@+id/close_imageview"
+        android:layout_width="@dimen/zm_btn_height_32dp"
+        android:layout_height="@dimen/zm_btn_height_32dp"
+        app:layout_constraintStart_toEndOf="@id/content_textview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        android:layout_marginLeft="@dimen/zm_margin_small"
+        android:padding="@dimen/zm_padding_smaller_size"
+        android:importantForAccessibility="yes"
+        android:contentDescription="@string/zm_btn_close"
+        android:src="@drawable/zm_ic_btn_close" />
+    <TextView
+        android:id="@+id/content_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/close_imageview"
+        tools:text="Scheduled message to send Feb 14 at 12:00 PM View all scheduled message"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

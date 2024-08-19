@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    android:minWidth="500dp"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/zm_padding_small_size" >
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar"
+        zoom:zm_leftButton="@+id/join_conf_btn_back"
+        zoom:zm_rightButton="@+id/viewRight"
+        zoom:zm_title="@+id/join_conf_title_view" >
+
+        <ImageButton
+            android:id="@+id/join_conf_btn_back"
+            style="@style/ZmBackButton"
+            android:contentDescription="@string/zm_btn_back" />
+
+        <View
+            android:id="@+id/viewRight"
+            android:layout_width="0dp"
+            android:layout_height="0dp" />
+
+        <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+            android:id="@+id/join_conf_title_view"
+            style="@style/ZmTitleBarTitle"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/zm_title_join_conf" />
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <com.zipow.videobox.view.panel.ZmPairedRoomInfoPanel
+        android:id="@+id/join_meeting_paired_zr_panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    
+    <com.zipow.videobox.navigation.ZMTabLayout
+        android:id="@+id/zm_join_conf_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_btn_height_32dp"
+        android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+        android:layout_marginStart="@dimen/zm_dialog_margin_24dp"
+        android:layout_marginEnd="@dimen/zm_dialog_margin_24dp"
+        android:background="@drawable/zm_corner_bg_efeff4_10"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabPaddingEnd="0dp"
+        app:tabPaddingStart="0dp"
+        app:tabMinWidth="0dp"
+        app:tabMaxWidth="0dp"
+        app:tabIndicator="@null"
+        android:visibility="gone"
+        tools:visibility="visible">
+    </com.zipow.videobox.navigation.ZMTabLayout>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/zm_join_conf_viewpager2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/zm_setting_item_group_spacing" />
+
+</LinearLayout>

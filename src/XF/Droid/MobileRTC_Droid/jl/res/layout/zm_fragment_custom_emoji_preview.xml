@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <us.zoom.uicommon.widget.view.ZMKeyboardDetector
+        android:id="@+id/keyboardDetector"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/panelTitleBar"
+            style="@style/ZmTitleBar.Dark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btnClose"
+                style="@style/ZmTitleBarAction"
+                android:text="@string/zm_btn_close"
+                android:textColor="@color/white" />
+
+            <LinearLayout
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:focusable="true">
+
+                <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+                    android:id="@+id/txtAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="@string/zm_custom_emoji_create_title_506846"
+                    android:textColor="@color/zm_v1_white"
+                    android:textSize="@dimen/zm_font_large_size"
+                    android:textStyle="bold"
+                    android:focusable="false"/>
+
+                <TextView
+                    android:id="@+id/txtAppName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="@string/zm_custom_emoji_edit_subtitle_506846"
+                    android:textColor="@color/zm_v1_white"
+                    android:textSize="@dimen/zm_font_smallest_size"
+                    android:focusable="false"/>
+            </LinearLayout>
+
+            <Button
+                style="@style/ZmButton.Small"
+                android:id="@+id/saveButton"
+                android:layout_width="72dp"
+                android:layout_height="32dp"
+                android:background="@drawable/zm_v2_custom_emoji_upload_bg"
+                android:layout_gravity="right|center_vertical"
+                android:layout_marginRight="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:text="@string/zm_btn_save"
+                android:enabled="true"
+                android:textAllCaps="false" />
+        </FrameLayout>
+
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="16dp"
+                android:paddingTop="10dp"
+                android:paddingRight="16dp"
+                android:paddingBottom="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/zm_custom_emoji_create_first_tip_506846"
+                    android:textColor="@color/zm_v2_custom_emoji_context"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="28dp"
+                    android:text="@string/zm_custom_emoji_create_first_label_506846"
+                    android:textColor="@color/zm_v2_custom_emoji_context"
+                    android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                    android:lineSpacingExtra="10dp"
+                    android:paddingBottom="26dp"
+                    android:text="@string/zm_custom_emoji_create_first_sub_tip_v2_506846"
+                    android:textColor="@color/zm_v2_custom_emoji_context"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:orientation="horizontal">
+
+                    <FrameLayout
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:background="@drawable/zm_ic_custom_emoji_preview_light_bg">
+
+                        <ImageView
+                            android:id="@+id/lightImage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:contentDescription="@null" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="78dp"
+                        android:layout_height="78dp"
+                        android:layout_marginLeft="@dimen/zm_dialog_margin_16dp"
+                        android:background="@drawable/zm_ic_custom_emoji_preview_black_bg">
+
+                        <ImageView
+                            android:id="@+id/blackImage"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_gravity="center"
+                            android:layout_marginBottom="4dp"
+                            android:contentDescription="@null" />
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/fileNameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="littlefrog.gif" />
+
+                        <TextView
+                            android:id="@+id/updateButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="6dp"
+                            android:layout_marginBottom="6dp"
+                            android:background="@drawable/zm_custom_emoji_preview_update_bg"
+                            android:paddingLeft="@dimen/zm_dialog_margin_16dp"
+                            android:paddingTop="8dp"
+                            android:paddingRight="@dimen/zm_dialog_margin_16dp"
+                            android:paddingBottom="8dp"
+                            android:text="@string/zm_custom_emoji_create_upload_506846"
+                            android:textAllCaps="false"
+                            android:textColor="@color/zm_v1_gray_2800"
+                            android:textSize="@dimen/zm_font_medium_size" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/zm_custom_emoji_create_preview_506846"
+                    android:textColor="@color/zm_v1_gray_2700"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                <TextView
+                    android:id="@+id/fileSizeWarningText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                    android:drawableLeft="@drawable/zm_ic_custom_emoji_preview_warning"
+                    android:drawablePadding="6dp"
+                    android:textColor="@color/zm_v1_red_B200"
+                    android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                    android:visibility="gone"
+                    android:text="@string/zm_custom_emoji_file_size_warning_506846"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:text="@string/zm_custom_emoji_create_second_label_506846"
+                    android:textColor="@color/zm_v2_custom_emoji_context"
+                    android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/inputTipsText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                    android:lineSpacingExtra="10dp"
+                    android:text="@string/zm_custom_emoji_create_second_sub_tip_506846"
+                    android:textColor="@color/zm_v2_custom_emoji_context"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                <EditText
+                    android:id="@+id/inputText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:background="@drawable/zm_custom_emoji_preview_input_bg"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="@dimen/zm_margin_small_6dp"
+                    android:paddingRight="8dp"
+                    android:paddingBottom="@dimen/zm_margin_small_6dp"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+                    android:singleLine="true"
+                    android:maxLength="102"
+                    tools:text=":littlefrog:" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/warningText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toLeftOf="@+id/sizeLimitText"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                        android:drawableLeft="@drawable/zm_ic_custom_emoji_preview_warning"
+                        android:drawablePadding="6dp"
+                        android:textColor="@color/zm_v1_red_B200"
+                        android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                        android:visibility="gone"
+                        tools:text="Name “littlefrog” has already been used"
+                        tools:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/sizeLimitText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                        android:layout_alignParentRight="true"
+                        android:textColor="@color/zm_v2_txt_information"
+                        android:textSize="@dimen/zm_ui_kit_text_size_12sp"
+                        tools:text="100/100"/>
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</FrameLayout>

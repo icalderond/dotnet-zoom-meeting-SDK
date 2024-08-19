@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:background="@color/zm_v2_window_gb"
+        android:weightSum="1"
+        >
+
+        <LinearLayout
+            android:id="@+id/panelSearchBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_btn_width_48dp"
+            android:background="@color/zm_white"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/zm_margin_normal"
+                android:layout_marginTop="@dimen/zm_margin_small_6dp"
+                android:layout_marginRight="@dimen/zm_margin_normal"
+                android:layout_marginBottom="@dimen/zm_margin_small_6dp"
+                android:background="@drawable/zm_im_search_bar_bg"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgSearch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/zm_margin_medium"
+                    android:src="@drawable/zm_ic_im_search"
+                    tools:ignore="ContentDescription"/>
+
+                <EditText
+                    android:id="@+id/edtSearch"
+                    style="@style/ZMEditText.GlobalSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/zm_margin_medium"
+                    android:layout_weight="1"
+                    android:hint="@string/zm_hint_search"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="@color/zm_v2_txt_secondary"/>
+
+                <ImageView
+                    android:id="@+id/btnClearSearchView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/zm_margin_medium"
+                    android:background="@drawable/ic_bottom_draggable_view_close"
+                    android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_divider_height"
+            android:background="@color/zm_v2_light_bg_normal" />
+        <FrameLayout
+            android:id="@+id/listContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <us.zoom.plist.newplist.view.ZmPListRecyclerView
+                android:id="@+id/plistView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/zm_v2_light_bg_normal"
+                android:scrollingCache="false" />
+        </FrameLayout>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/panelBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/zm_v2_tab"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        >
+
+        <us.zoom.plist.view.ZmPListEmojiReactionCountsPanel
+            android:id="@+id/emojiCounts"
+            android:padding="@dimen/zm_padding_small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/panelActions"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_pt_titlebar_height"
+            android:splitMotionEvents="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/zm_padding_small_size"
+            android:paddingRight="@dimen/zm_padding_small_size"
+            android:paddingTop="@dimen/zm_padding_smallest_size"
+            android:paddingBottom="@dimen/zm_padding_smaller_size">
+
+            <Button
+                android:id="@+id/btnInvite"
+                style="@style/ZmButton.Small.Secondary"
+                android:textSize="@dimen/zm_font_small_size"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zm_btn_small_height"
+                android:maxWidth="100dp"
+                android:text="@string/zm_btn_invite"
+                android:background="@drawable/zm_v2_bg_small_secondary_btn"
+                android:textColor="@color/zm_v2_btn_black_text_color"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="@dimen/zm_divider_height"
+                android:layout_weight="1" />
+
+
+            <Button
+                android:id="@+id/btnMuteAll"
+                style="@style/ZmButton.Small.Secondary"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zm_btn_small_height"
+                android:maxWidth="@dimen/zm_btn_medium_min_width"
+                android:text="@string/zm_btn_mute_all"
+                android:background="@drawable/zm_v2_bg_small_secondary_btn"
+                android:textColor="@color/zm_v2_btn_black_text_color"/>
+
+            <ImageView
+                android:id="@+id/btnMore"
+                style="@style/ZmButton.Small.Secondary"
+                android:layout_width="@dimen/zm_text_normal_width"
+                android:layout_height="@dimen/zm_btn_small_height"
+                android:scaleType="center"
+                android:layout_marginLeft="@dimen/zm_padding_smallest_size"
+                android:src="@drawable/ic_more"
+                android:contentDescription="@string/zm_mm_lbl_emojis_12050"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

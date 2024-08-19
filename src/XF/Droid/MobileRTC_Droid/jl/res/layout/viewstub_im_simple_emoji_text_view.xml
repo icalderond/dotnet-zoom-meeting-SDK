@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.zimmsg.emoji.ZmIMSimpleEmojiTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:ignore="MissingDefaultResource"
+    tools:text="@tools:sample/full_names" />

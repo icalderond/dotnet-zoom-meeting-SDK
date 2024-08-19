@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.zmsg.view.mm.ReactionEmojiSampleView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stickerStub"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+</us.zoom.zmsg.view.mm.ReactionEmojiSampleView>

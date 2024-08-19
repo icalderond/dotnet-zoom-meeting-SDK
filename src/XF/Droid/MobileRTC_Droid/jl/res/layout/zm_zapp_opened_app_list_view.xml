@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/actionSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_bottom_sheet_round_rect_white_bg"
+    zoom:layout_constraintBottom_toBottomOf="parent"
+    zoom:layout_constraintEnd_toEndOf="parent"
+    zoom:layout_constraintStart_toStartOf="parent">
+
+    <us.zoom.uicommon.widget.view.ZMTextView
+        android:id="@+id/titleText"
+        style="@style/ZmTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_small_minus_size"
+        android:layout_marginTop="@dimen/zm_margin_medium_minus_size"
+        android:text="@string/zm_zapp_opened_title_341906"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toTopOf="parent" />
+
+    <us.zoom.uicommon.widget.recyclerview.ZMRecyclerView
+        android:id="@+id/menuList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+        zoom:maxHeightRatio="0.5"
+        zoom:layout_constrainedHeight="true"
+        zoom:layout_constraintBottom_toTopOf="parent"
+        zoom:layout_constraintEnd_toEndOf="parent"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toBottomOf="@id/titleText"
+        android:layout_marginBottom="@dimen/zm_padding_normal_size"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="us.zoom.videomeetings"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="33" />
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+        <intent>
+            <action android:name="android.settings.action.MANAGE_OVERLAY_PERMISSION" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.SENDTO" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.EDIT" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.GET_CONTENT" />
+        </intent>
+        <intent>
+            <action android:name="us.zoom.videomeetings.intent.action.JoinBeforeHost" />
+        </intent>
+        <intent>
+            <action android:name="us.zoom.videomeetings.intent.action.CallMyPhone" />
+        </intent>
+        <intent>
+            <action android:name="us.zoom.videomeetings.intent.action.MeetingInvite" />
+        </intent>
+    </queries>
+
+    <uses-feature android:glEsVersion="0x00020000" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.bluetooth"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
+
+    <!-- In Meeting Kubi Functions will need the following Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- In Meeting Share/Annotation/VirtualBackground will need the following Permissions -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+
+    <!-- "Connect to the network" will need the following Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <!-- In Meeting "Audio With VOIP" will need the following Permissions -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- In Meeting "Kubi Device/Audio with bluetooth" will need the following Permissions -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <!-- In Meeting "Audio With VOIP/Share Screen Audio" will need the following Permissions -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- "Preview/In Meeting Video/VirtualBackground/Share Camera" will need the following Permissions -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- "Keep the CPU on in meeting when screen off" will need the following Permissions -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <!-- In Meeting "audio with Dial in" will need the following Permissions -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- In Meeting "share screen/MiniMeeting" will need the following Permissions -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <!-- "Foreground services and notifications"  will need the following Permissions -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+
+    <!-- In Meeting PIP Mode will need the following Permissions -->
+    <uses-permission android:name="android.permission.REORDER_TASKS" />
+
+    <!-- define the permission for ipc broadcast  start -->
+    <permission-group
+        android:name="${applicationId}.sdk.permission-group.ipc"
+        android:label="@string/zm_permission_ipc_group_label" />
+
+    <permission
+        android:name="${applicationId}.sdk.permission-group.ipc.sender"
+        android:icon="@drawable/zm_launcher"
+        android:label="@string/zm_permission_ipc_sender_label"
+        android:permissionGroup="${applicationId}.sdk.permission-group.ipc"
+        android:protectionLevel="signature" />
+
+    <!-- define the permission for ipc broadcast  end -->
+
+    <uses-permission android:name="${applicationId}.sdk.permission-group.ipc.sender" />
+
+    <application
+        android:allowBackup="false"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:resizeableActivity="true"
+        android:usesCleartextTraffic="false" >
+
+        <!-- New Android S(12) libraries -->
+        <uses-native-library
+            android:name="libOpenCL-pixel.so"
+            android:required="false" />
+        <uses-native-library
+            android:name="libOpenCL.so"
+            android:required="false" />
+
+        <activity
+            android:name="us.zoom.internal.helper.PrivacyDisclaimerActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.JoinByURLActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.IntegrationActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.MeetingEndMessageActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMDialog.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.JoinMeetingFailActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/ZMDialog.Transparent" />
+        <activity
+            android:name="com.zipow.videobox.conference.ui.ZmFoldableConfActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name="com.zipow.videobox.conference.ui.ZmConfPipActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:excludeFromRecents="true"
+            android:hardwareAccelerated="true"
+            android:launchMode="singleTask"
+            android:supportsPictureInPicture="true"
+            android:taskAffinity="us.zoom.sdk.pip"
+            android:theme="@style/ZMTheme.Transparent" />
+        <activity
+            android:name="us.zoom.plist.view.PListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="us.zoom.feature.videoeffects.ui.ZmVideoEffectsActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="us.zoom.feature.videoeffects.ui.avatar.customized.ZmCreateCustomized3DAvatarActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.InMeetingSettingsActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.CallInActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="com.zipow.videobox.SimpleActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.zipow.videobox.SimpleInMeetingActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="com.zipow.videobox.ZmPollingActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name="us.zoom.uicommon.activity.ZMFileListActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:exported="false"
+            android:theme="@style/ZMTheme.SubWindow" />
+        <activity
+            android:name="us.zoom.feature.qa.ZmQAActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|layoutDirection|screenLayout|keyboardHidden|uiMode|colorMode"
+            android:hardwareAccelerated="true"
+            android:theme="@style/ZMTheme.SubWindow"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+
+        <service
+            android:name="com.zipow.videobox.kubi.KubiService"
+            android:exported="false"
+            android:label="@string/zm_app_name" />
+        <service
+            android:name="com.zipow.videobox.share.ScreenShareServiceForSDK"
+            android:exported="false"
+            android:foregroundServiceType="mediaProjection|microphone"
+            android:label="@string/zm_app_name" />
+    </application>
+
+</manifest>

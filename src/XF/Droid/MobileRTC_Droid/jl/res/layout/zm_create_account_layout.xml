@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar"
+        android:elevation="0dp"
+        zoom:zm_leftButton="@+id/btnCancel"
+        zoom:zm_title="@+id/txtTitle">
+
+        <ImageButton
+            android:id="@+id/btnCancel"
+            style="@style/ZmBackButton"
+            android:contentDescription="@string/zm_btn_back" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZmTitleBarTitle"
+            android:text="@string/zm_btn_create_account_31350" />
+
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/zm_margin_small_size"
+            android:layout_marginTop="@dimen/zm_margin_medium_size"
+            android:text="@string/zm_signup_enter_name_tip_442801"
+            android:textColor="@color/zm_v2_txt_secondary"
+            android:textSize="@dimen/zm_ui_kit_text_size_13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <us.zoom.uicommon.widget.view.ZMSettingsCategory
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/txtFirstName"
+                        style="@style/ZmInputBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_edit_text_normal_height"
+                        android:background="@color/zm_white"
+                        android:fontFamily="sans-serif"
+                        android:hint="@string/zm_hint_first_name"
+                        android:inputType="text" />
+
+                    <EditText
+                        android:id="@+id/txtLastName"
+                        style="@style/ZmInputBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_edit_text_normal_height"
+                        android:fontFamily="sans-serif"
+                        android:background="@color/zm_white"
+                        android:hint="@string/zm_hint_last_name"
+                        android:inputType="text" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/zm_edit_text_normal_height">
+
+                        <EditText
+                            android:id="@+id/txtPassword"
+                            style="@style/ZmInputBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/zm_edit_text_normal_height"
+                            android:layout_gravity="center"
+                            android:paddingLeft="@dimen/zm_view_height_40dp"
+                            android:paddingRight="@dimen/zm_view_height_40dp"
+                            android:fontFamily="sans-serif"
+                            android:background="@color/zm_white"
+                            android:hint="@string/zm_hint_zoom_pwd"
+                            android:inputType="textPassword" />
+
+                        <CheckedTextView
+                            android:id="@+id/zm_signup_pwd_show_btn"
+                            android:layout_width="@dimen/zm_btn_height_32dp"
+                            android:layout_height="@dimen/zm_btn_height_32dp"
+                            android:layout_gravity="right|center_vertical"
+                            android:layout_marginRight="@dimen/zm_dialog_margin_12dp"
+                            android:gravity="center"
+                            android:checked="true"
+                            android:checkMark="@drawable/zm_signup_show_pwd_bg" />
+
+                    </FrameLayout>
+
+
+                </LinearLayout>
+            </us.zoom.uicommon.widget.view.ZMSettingsCategory>
+
+            <Button
+                android:id="@+id/btnCreateAccount"
+                style="@style/ZmButton"
+                android:layout_marginLeft="@dimen/zm_dialog_margin_24dp"
+                android:layout_marginTop="@dimen/zm_dialog_margin_24dp"
+                android:layout_marginRight="@dimen/zm_dialog_margin_24dp"
+                android:text="@string/zm_btn_create_account_31350" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

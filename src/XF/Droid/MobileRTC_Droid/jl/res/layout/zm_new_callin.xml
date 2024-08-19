@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Zoom Video Communication. All rights reserved.
+  ~ Created by Jake Wang on 6/29/21 8:03 AM
+  ~ Last modified 6/29/21 8:02 AM
+  ~
+  -->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/newConfStateCallConnecting"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+   >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/normalPanel"
+        android:layout_margin="@dimen/zm_margin_normal"
+       >
+
+        <LinearLayout
+            android:id="@+id/topbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnMinimize"
+                style="@style/ZMTextView.Title.OnLight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/zm_mi_minimize_meeting_32646"
+                android:src="@drawable/ic_new_meeting_call_resize"
+                android:scaleType="centerInside"
+                />
+
+            <TextView
+                android:id="@+id/unlock_msg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowColor="@color/zm_black"
+                android:shadowDx="2"
+                android:shadowDy="2"
+                android:text="@string/zm_msg_calling_unlock_screen_7473"
+                android:textSize="@dimen/zm_font_large_size" />
+        </LinearLayout>
+        <com.zipow.videobox.newcalling.ZmCallInPreview
+            android:id="@+id/panelSurfaceHolder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toTopOf="@id/panelBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/topbar"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/panelBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constrainedHeight="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/panelSurfaceHolder">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <us.zoom.uicommon.widget.view.ZMCommonTextView
+                    android:id="@+id/txtCallerName"
+                    style="@style/ZmTextView.Title.Medium"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    tools:text="Reed Yang"
+                    />
+
+                <us.zoom.uicommon.widget.view.ZMCommonTextView
+                    android:id="@+id/txtMsgCalling"
+                    style="@style/ZmTextView.Content.Primary"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/zm_padding_medium"
+                    android:text="@string/zm_msg_invite_to_meeting_472355" />
+            </LinearLayout>
+
+            <include
+                android:id="@+id/panelBottomBar"
+                layout="@layout/zm_new_callin_ui_bottom_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/txSendMessage"
+                style="@style/ZmTextView.Title.Medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/zm_margin_small"
+                android:drawableEnd="@drawable/ic_drop_down"
+                android:drawablePadding="@dimen/zm_padding_smaller_size"
+                android:text="@string/zm_invite_call_send_msg_393647"
+                tools:visibility="visible"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/zm_pip_callin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

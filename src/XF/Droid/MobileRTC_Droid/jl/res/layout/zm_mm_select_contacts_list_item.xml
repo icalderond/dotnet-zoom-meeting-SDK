@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="left|center_vertical"
+    android:weightSum="1"
+    android:paddingLeft="10dp"
+    android:paddingTop="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/no_email_found_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/txt_holder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/zm_mm_email_not_found_holder"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+            android:paddingTop="16dp"
+            android:drawablePadding="10dp"
+            android:text="@string/zm_mm_share_invite_link_no_matches_are_found_in_your_zoom_contacts_459929"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/add_external_user_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/zm_setting_sub_option_item"
+            android:clickable="true"
+            android:focusable="true"
+            android:paddingLeft="16dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintRight_toRightOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/txt_holder">
+
+            <ImageView
+                android:id="@+id/new_external_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:src="@drawable/zm_mm_add_new_external_user"
+                zoom:layout_constraintLeft_toLeftOf="parent"
+                zoom:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/add_external_user_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="@string/zm_mm_share_invite_link_add_an_external_contact_459929"
+                android:textColor="@color/zm_v2_txt_information_bold"
+                zoom:layout_constraintLeft_toRightOf="@id/new_external_image"
+                zoom:layout_constraintTop_toTopOf="@id/new_external_image" />
+
+            <TextView
+                android:id="@+id/invite_as_a_new_member_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="16dp"
+                android:text="@string/zm_mm_share_invite_link_invite_as_a_new_member_459929"
+                android:textColor="@color/zm_v1_gray_EA00"
+                zoom:layout_constraintLeft_toRightOf="@id/new_external_image"
+                zoom:layout_constraintBottom_toBottomOf="@id/new_external_image"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:id="@+id/holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left|center_vertical"
+        android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <us.zoom.uicommon.widget.view.ZMCheckedTextView
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:checkMark="@drawable/zm_ctv" />
+        <ProgressBar
+            style="@style/ZMProgressBar.Small"
+            android:id="@+id/progressBarLoading"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:visibility="invisible"
+            android:focusable="false"
+            android:gravity="center_vertical"
+            />
+
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="49dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp">
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            zoom:zm_description_enable="false" />
+        <ImageView
+            android:id="@+id/imgE2EFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="right"
+            android:src="@drawable/zm_e2e_flag"
+            tools:ignore="ContentDescription" />
+    </FrameLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0px"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:gravity="left|center_vertical">
+         
+        <us.zoom.uicommon.widget.view.PListNameRoleLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|center_vertical"
+            android:orientation="horizontal" >
+
+            <us.zoom.zmsg.view.ZmSessionBriefInfoTitleView
+                android:id="@+id/sessionListItemTitleView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/zm_padding_smallest" />
+
+            <us.zoom.zimmsg.emoji.ZmIMSimpleEmojiTextView
+                android:id="@+id/txtContactsDescrption"
+                style="@style/ZMTextView.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:visibility="gone"
+                android:gravity="left|center_vertical"
+                android:textColor="@color/zm_mm_presence_offline" />
+            <us.zoom.zimmsg.view.IMPresenceStateView
+                android:id="@+id/presenceStateView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                zoom:zm_subpresence_type="0">
+
+            </us.zoom.zimmsg.view.IMPresenceStateView>
+        </us.zoom.uicommon.widget.view.PListNameRoleLayout>
+    
+        <TextView
+            android:id="@+id/txtEmail"
+            style="@style/UIKitTextView.SecondaryText.Dimmed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ellipsize="end"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/zm_mm_starred_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginRight="24dp"
+        android:visibility="gone"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_starred_folder_member"
+            android:contentDescription="@string/zm_mm_lbl_star_contacts_68451">
+
+        </ImageView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/UIKitTextView.PrimaryText.Medium"
+            android:textColor="@color/zm_chat_typing_text"
+            android:layout_marginLeft="5dp"
+            android:text="@string/zm_mm_lbl_star_contacts_68451">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/zm_mm_folder_linear"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginRight="24dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_grouped_folder_member"
+            tools:ignore="ContentDescription" >
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/zm_mm_folder_member_name"
+            style="@style/UIKitTextView.PrimaryText.Medium"
+            android:maxWidth="100dp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="@color/zm_chat_typing_text">
+
+        </TextView>
+    </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+

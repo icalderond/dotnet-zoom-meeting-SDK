@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panelTitleBar"
+    style="@style/ZmTitleBar.Dark"
+    zoom:zm_leftButton="@+id/btnBack"
+    zoom:zm_rightButton="@+id/panelTitleRight"
+    zoom:zm_title="@+id/panelTitleCenter"
+    zoom:zm_fillOthers="true">
+
+        <LinearLayout
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:contentDescription="@string/zm_accessibility_back_button_179220"
+            >
+            <FrameLayout
+                android:id="@+id/leftButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                >
+                <Button
+                    android:id="@+id/btnClose"
+                    style="@style/ZmTitleBarAction.Tablet"
+                    android:text="@string/zm_btn_close"
+                    android:duplicateParentState="true"
+                    android:visibility="gone"
+                    />
+                <ImageButton
+                    android:id="@+id/imageBack"
+                    style="@style/ZmBackButton.Dark"
+                    android:layout_width="23dp"
+                    android:duplicateParentState="true"
+                    android:focusable="false"
+                    android:importantForAccessibility="no"
+                    android:paddingRight="0dp"
+                    android:contentDescription="@string/zm_btn_back" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/txtNoteBubble"
+                style="@style/ZMTextView.UnreadMessageCount.Gray"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:duplicateParentState="true"
+                android:focusable="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                tools:visibility="visible"
+                tools:text="12"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelTitleRight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnVideoCall"
+                style="@style/ZmBackButton.Dark"
+                android:paddingLeft="@dimen/zm_padding_smallest_size"
+                android:paddingRight="@dimen/zm_padding_smallest_size"
+                android:layout_marginLeft="0dp"
+                tools:visibility="visible"
+                android:contentDescription="@string/zm_mm_opt_video_call"
+                android:src="@drawable/zm_ic_video_ondark"/>
+
+            <ImageButton
+                android:id="@+id/btnPhoneCall"
+                style="@style/ZmBackButton.Dark"
+                android:paddingLeft="@dimen/zm_padding_smallest_size"
+                android:paddingRight="@dimen/zm_padding_smallest_size"
+                android:layout_marginLeft="0dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:contentDescription="@string/zm_mm_opt_voice_call"
+                android:src="@drawable/zm_ic_phone_ondark"/>
+
+            <Button
+                android:id="@+id/btnJump"
+                style="@style/ZmTitleBarAction.Dark"
+                android:text="@string/zm_btn_jump"
+                android:visibility="gone"
+                tools:visibility="gone" />
+
+        </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panelTitleCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="@dimen/zm_avatar_thread_title_size"
+            android:layout_height="@dimen/zm_avatar_thread_title_size"
+            android:duplicateParentState="true"
+            android:layout_marginStart="@dimen/zm_margin_smaller_size"
+            zoom:layout_constraintBottom_toBottomOf="parent"
+            zoom:layout_constraintStart_toStartOf="parent"
+            zoom:layout_constraintTop_toTopOf="parent"
+            zoom:zm_avatarBorderColor="@color/zm_transparent"
+            zoom:zm_avatarBorderSize="0dp"
+            zoom:zm_cornerRadiusRatio="0.32"
+            zoom:zm_description_enable="false" />
+
+        <us.zoom.zmsg.view.ZmSessionBriefInfoTitleView
+            android:id="@+id/sessionListItemTitleView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/zm_margin_small"
+            zoom:layout_constraintBottom_toTopOf="@id/lyDetail"
+            zoom:layout_constraintEnd_toEndOf="parent"
+            zoom:layout_constraintStart_toEndOf="@id/avatarView"
+            zoom:layout_constraintTop_toTopOf="@id/avatarView" />
+
+        <LinearLayout
+            android:id="@+id/lyDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            zoom:layout_constraintBottom_toBottomOf="@id/avatarView"
+            zoom:layout_constraintStart_toStartOf="@id/sessionListItemTitleView"
+            zoom:layout_constraintTop_toBottomOf="@id/sessionListItemTitleView">
+
+            <us.zoom.zimmsg.view.IMPresenceStateView
+                android:id="@+id/imgPresence"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:paddingEnd="3dp"
+                android:importantForAccessibility="no"
+                zoom:zm_subpresence_type="0" />
+
+            <us.zoom.zimmsg.emoji.ZmIMSimpleEmojiTextView
+                android:id="@+id/txtDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="start|center_vertical"
+                android:maxLines="1"
+                android:textColor="@color/zm_v1_white"
+                android:textSize="@dimen/zm_ui_kit_text_size_11sp"
+                tools:text="@tools:sample/full_names" />
+
+            <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+                android:id="@+id/txtPmcMeetingTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/zm_v1_white"
+                android:textSize="@dimen/zm_ui_kit_text_size_11sp"
+                android:visibility="gone"
+                tools:text="October 10, 10:58 AM - October 11, 7:18 PM"
+                tools:visibility="visible" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+<!--    <EditText-->
+<!--        android:id="@+id/btnSearch"-->
+<!--        style="@style/ZMEditText.GlobalSearch"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:background="@drawable/zm_white_search_corner_bg"-->
+<!--        android:layout_marginTop="8dp"-->
+<!--        android:layout_marginBottom="8dp"-->
+<!--        android:layout_marginRight="5dp"-->
+<!--        android:drawableLeft="@null"-->
+<!--        android:alpha="0"-->
+<!--        android:focusable="false"-->
+<!--        android:cursorVisible="false"-->
+<!--        android:paddingLeft="8dp"-->
+<!--        android:hint="@string/zm_btn_search" />-->
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>

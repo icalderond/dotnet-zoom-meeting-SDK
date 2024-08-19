@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingTop="8dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/systemMessageButtonLayout"
+        style="@style/ZmSettingItem"
+        android:gravity="center">
+
+        <ViewStub
+            android:id="@+id/subtxtMessage"
+            android:inflatedId="@+id/inflatedtxtMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+
+
+        <ImageView
+            android:id="@+id/historyArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:importantForAccessibility="no"
+            android:src="@drawable/zm_ic_chevron_down" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/systemMessagesContainer"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

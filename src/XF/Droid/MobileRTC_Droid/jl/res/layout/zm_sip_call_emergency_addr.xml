@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/e911Addr"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/blockE911Addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/txtE911AddrTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zm_sip_emergency_addr_detected_166817"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtE911Addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:maxWidth="260dp"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:visibility="gone"
+            tools:text="detail addressfdsafd ,awf ewa, fdsfasd9feafsaj  0 0787 kfkds fdsaf, fasd , rqw3r3qe"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtEmergencyElinTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/zm_margin_medium"
+            android:gravity="center"
+            android:text="@string/zm_sip_emergency_title_elin_number_475046"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txtEmergencyElinNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:lineSpacingExtra="4dp"
+            android:maxWidth="260dp"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:visibility="gone"
+            tools:text="+87 (500) 555-1234"
+            tools:visibility="visible" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/icLoadingE911"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/zm_sip_e911_loading_addr_373149"
+        android:src="@drawable/zm_ic_loading_light_night_animated"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

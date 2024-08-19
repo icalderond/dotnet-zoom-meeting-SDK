@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="wrap_content"
+    android:gravity="center_vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/zm_padding_medium"
+        android:gravity="center_vertical"
+        android:background="@drawable/ic_template_picker_bg">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_template_clock"
+            tools:ignore="ContentDescription">
+
+        </ImageView>
+
+        <TextView
+            style="@style/ZmTextView.Content.Primary"
+            android:textColor="@color/zm_v2_template_radio_text"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/templateTimeTxt"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+
+        </TextView>
+        <ImageView
+            android:layout_marginLeft="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_template_chevron"
+            tools:ignore="ContentDescription">
+
+        </ImageView>
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_marginLeft="@dimen/zm_padding_small"
+        android:id="@+id/templateTimePickerProgress"
+        style="@style/ZMProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        />
+    <ImageView
+        android:layout_marginLeft="@dimen/zm_padding_small"
+        android:id="@+id/templateTimePickerError"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zm_mm_msg_state_fail"
+        tools:ignore="ContentDescription"
+        android:visibility="gone"
+        >
+
+    </ImageView>
+</LinearLayout>

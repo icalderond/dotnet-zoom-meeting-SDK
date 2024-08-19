@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <com.zipow.videobox.view.SimpleAnimCloseView
+        android:id="@+id/btn_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="@dimen/zm_ui_kit_page_left_padding"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.zipow.videobox.view.sip.SipIncomeAvatar
+        android:id="@+id/avatar"
+        android:layout_width="@dimen/zm_sip_income_avatar_bg1_size"
+        android:layout_height="@dimen/zm_sip_income_avatar_bg1_size"
+        android:layout_centerHorizontal="true"
+        app:backgroundStyle="light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline3" />
+
+    <TextView
+        android:id="@+id/tvBuddyName"
+        style="@style/UIKitTextView.BuddyName.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="400dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+        android:layout_marginEnd="20dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusableInTouchMode="true"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:gravity="center_horizontal"
+        android:maxLines="1"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/avatar"
+        tools:text="Jason ShenJason ShenJason ShenJason ShenJason ShenJason ShenJason Shen" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        style="@style/UIKitTextView.PrimaryText.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center_horizontal"
+        android:maxLines="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvBuddyName"
+        tools:text="@string/zm_sip_income_status_text_26673"
+        tools:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/panelCallType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@id/panelCallBtns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvStatus">
+
+        <TextView
+            android:id="@+id/last_from_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="36dp"
+            android:layout_marginEnd="36dp"
+            android:layout_marginBottom="12dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            tools:text="transfer from Hana Song - Ext. 1234" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="36dp"
+            android:paddingEnd="36dp">
+
+            <TextView
+                android:id="@+id/to_line_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/zm_v2_txt_primary"
+                android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                tools:text="to Sales Queue" />
+
+            <us.zoom.zimmsg.view.IMPresenceStateView
+                android:id="@+id/presence_state_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/to_line_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/zm_v2_txt_primary"
+                android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                tools:text=" - (500) 555-6885" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelCallBtns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center_horizontal|top"
+        android:orientation="horizontal"
+        app:layout_goneMarginBottom="0dp"
+        app:layout_constraintBottom_toTopOf="@id/panelDeclineWithMes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:id="@+id/panelEndAcceptCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/btnEndAcceptCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:contentDescription="@string/zm_sip_end_accept_61381"
+                android:scaleType="fitXY"
+                android:src="@drawable/zm_sip_end_accept" />
+
+            <TextView
+                android:id="@+id/txtEndAcceptCall"
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/zm_sip_end_accept_61381" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelEndCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btnEndCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:contentDescription="@string/zm_btn_decline"
+                android:scaleType="fitXY"
+                android:src="@drawable/zm_sip_end_call" />
+
+            <TextView
+                android:id="@+id/txtEndCall"
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/zm_btn_decline" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/panelAcceptCall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|top"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/btnAcceptCall"
+                android:layout_width="@dimen/zm_sip_dialpad_key_width"
+                android:layout_height="@dimen/zm_sip_dialpad_key_width"
+                android:contentDescription="@string/zm_btn_accept_call_14480"
+                android:scaleType="fitXY"
+                android:src="@drawable/zm_sip_start_call" />
+
+            <TextView
+                android:id="@+id/txtAccpetCall"
+                style="@style/ZMTextView.Normal.Grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:importantForAccessibility="no"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/zm_btn_accept_sip_61381" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/panelDeclineWithMes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/guideline4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/btnDeclineWithMes"
+            style="@style/ZmButton.Secondary"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="@string/zm_pbx_decline_with_message_428933" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintGuide_percent="0.95" />
+</androidx.constraintlayout.widget.ConstraintLayout>

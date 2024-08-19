@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_top_radius_dialog_background">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/statistical_panel"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_tab_parent"
+        android:background="@android:color/transparent" />
+
+    <LinearLayout
+        android:id="@+id/bottom_tab_parent"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/transparent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:tabIndicatorColor="@color/zm_v2_text_btn_blue_normal"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="@color/zm_v2_text_btn_blue_normal"
+            app:tabTextAppearance="@style/PanelTabTextAppearance"
+            app:tabTextColor="@color/zm_v2_txt_secondary" />
+
+    </LinearLayout>
+
+</RelativeLayout>

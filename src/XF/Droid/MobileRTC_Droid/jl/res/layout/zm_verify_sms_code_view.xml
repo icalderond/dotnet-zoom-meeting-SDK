@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/first"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginStart="@dimen/zm_margin_largest_size"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        app:layout_constraintEnd_toStartOf="@+id/second"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/second"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_smaller_size"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        app:layout_constraintEnd_toStartOf="@+id/third"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/first"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/third"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginStart="@dimen/zm_margin_smaller_size"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/fouth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/second"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/fouth"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_normal_size"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/fifth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/third"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/fifth"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_smaller_size"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        app:layout_constraintEnd_toStartOf="@+id/sixth"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fouth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+    <TextView
+        android:id="@+id/sixth"
+        style="@style/ZmTextView_VerifyCode"
+        android:layout_width="@dimen/zm_view_height_40dp"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/zm_text_normal_height"
+        android:layout_marginLeft="@dimen/zm_margin_smaller_size"
+        android:textSize="@dimen/zm_ui_kit_text_size_28sp"
+        android:layout_marginEnd="@dimen/zm_margin_largest_size"
+        android:background="@drawable/zm_signup_verify_code_normal"
+        android:gravity="center"
+        android:focusable="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fifth"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

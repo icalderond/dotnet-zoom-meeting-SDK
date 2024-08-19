@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panelView"
+        android:layout_width="280dp"
+        android:layout_height="@dimen/zm_picker_attachment_item_height"
+        android:background="@drawable/zm_input_attachment_preview_bg"
+        android:layout_margin="4dp"
+        android:paddingStart="8dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingEnd="8dp">
+
+        <ImageView
+            android:id="@+id/imgFileIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="@dimen/zm_margin_small"
+            tools:src="@drawable/zm_ic_filetype_doc"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:ignore="ContentDescription" />
+
+        <FrameLayout
+            android:id="@+id/fileNameLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingLeft="4dp"
+            app:layout_constraintLeft_toRightOf="@+id/imgFileIcon"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/txtFileSize"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <ViewStub
+                android:id="@+id/subFileName"
+                android:inflatedId="@+id/inflatedFileName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtFileSize"
+            style="@style/ZmTextView.Content.Primary.Small.Dimmed"
+            android:gravity="left|center_vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@+id/imgFileIcon"
+            app:layout_constraintTop_toBottomOf="@+id/fileNameLayout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:text="10 M" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/btnDelete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="end|top"
+        android:background="@drawable/ic_pic_delete"
+        android:contentDescription="@string/zm_mm_delete_file_accessibility_137127"/>
+</FrameLayout>

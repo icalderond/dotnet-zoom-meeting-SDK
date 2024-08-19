@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:zoom="http://schemas.android.com/apk/res-auto"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<TextView
+		android:id="@+id/alertTitle"
+		style="@style/ZMTextView.Large.DialogTitle"
+		android:paddingBottom="@dimen/zm_padding_medium_size"
+		android:paddingLeft="@dimen/zm_padding_normal_size"
+		android:paddingRight="@dimen/zm_padding_normal_size"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical"
+		android:ellipsize="end"
+		android:gravity="center"
+		android:text="Title text " />
+	<ScrollView
+		android:id="@+id/scrollView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingLeft="@dimen/zm_padding_large_size"
+		android:paddingRight="@dimen/zm_padding_large_size"
+		android:overScrollMode="ifContentScrolls"
+		android:paddingBottom="0dip"
+		android:minHeight="@dimen/zm_margin_large_minus_size">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			android:gravity="center_vertical">
+
+			<TextView
+				android:id="@+id/alertdialogmsg"
+				style="@style/ZMTextView.Normal.DialogMsg"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:gravity="center"
+				android:text="message text" />
+
+		</LinearLayout>
+	</ScrollView>
+	<TextView
+		android:id="@+id/txSendMessage"
+		style="@style/ZMTextView.Large.DialogTitle"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_horizontal"
+		android:drawableEnd="@drawable/ic_drop_down"
+		android:drawablePadding="@dimen/zm_padding_smaller_size"
+		android:layout_marginTop="@dimen/zm_margin_smaller_size"
+		android:text="@string/zm_invite_call_send_msg_393647" />
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/bottomPanel"
+		android:orientation="vertical"
+		android:visibility="gone"
+		>
+	<us.zoom.uicommon.widget.recyclerview.ZMRecyclerView
+		android:id="@+id/menu_list"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		zoom:layout_constraintStart_toStartOf="parent"
+		zoom:layout_constraintEnd_toEndOf="parent"
+		zoom:layout_constraintTop_toTopOf="parent"
+		zoom:layout_constraintBottom_toTopOf="@+id/btnCancel"
+		android:layout_marginTop="@dimen/zm_margin_small_size"
+		android:layout_marginLeft="@dimen/zm_margin_small_minus_size"
+		android:layout_marginRight="@dimen/zm_margin_small_minus_size"
+		zoom:autoHeight="true"
+		/>
+	<include layout="@layout/zm_invite_call_input_menu_item"/>
+	</LinearLayout>
+</LinearLayout>

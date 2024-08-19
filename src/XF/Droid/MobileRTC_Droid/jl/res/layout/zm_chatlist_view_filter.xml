@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp"
+    tools:ignore="MissingDefaultResource">
+
+    <TextView
+        android:id="@+id/txtFilterTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:duplicateParentState="true"
+        android:textSize="22sp"
+        android:text="@string/zm_im_chatlist_filter_title_516881"
+        android:textColor="@color/zm_v2_txt_information_bold"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:text="Messages"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgFilterIcon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@null"
+        android:duplicateParentState="true"
+        android:src="@drawable/ic_im_chatlist_filter"
+        android:contentDescription="@string/zm_im_chatlist_filter_description_516881"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
+
+    <LinearLayout
+        android:id="@+id/viewFilterOpt"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:gravity="center_vertical"
+        android:layout_marginRight="@dimen/zm_margin_medium_size"
+        android:background="@drawable/zm_bg_blue_bubble"
+        android:paddingLeft="@dimen/zm_padding_small"
+        android:visibility="gone"
+        android:contentDescription="@null"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imgFilterIcon"
+        tools:visibility="visible"
+        >
+        <TextView
+            android:id="@+id/txtOptName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:text="@string/zm_im_chatlist_filter_title_516881"
+            android:textColor="@color/zm_v2_txt_information_bold"
+            android:contentDescription="@null"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:text="Mentions"
+            />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iconOptCancel"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:scaleType="center"
+            android:background="@null"
+            android:duplicateParentState="true"
+            android:src="@drawable/ic_im_chatlist_filter_close"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

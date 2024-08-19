@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Zoom Video Communication. All rights reserved.
+  ~ Created by Jake Wang on 6/29/21 8:03 AM
+  ~ Last modified 6/29/21 8:02 AM
+  ~
+  -->
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <SurfaceView
+        android:id="@+id/svPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/defaultPreView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:background="@color/zm_v1_gray_2150"
+        android:gravity="center"
+        android:visibility="gone"
+        tools:visibility="visible"
+        >
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/defaultAvatarView"
+            android:layout_width="@dimen/zm_btn_medium_min_width"
+            android:layout_height="@dimen/zm_btn_medium_min_width"
+            zoom:zm_description_enable="false"
+            />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/txtSvName"
+            style="@style/ZmTextView.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/zm_v1_white"
+            tools:text="claire hou"
+             />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/zm_height_36dp"
+        android:orientation="horizontal">
+
+        <CheckedTextView
+            android:id="@+id/btnPreAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/zm_padding_medium_size"
+            android:checkMark="@drawable/btn_audio_state_bg" />
+
+        <CheckedTextView
+            android:id="@+id/btnPreVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkMark="@drawable/btn_video_state_bg" />
+    </LinearLayout>
+
+</FrameLayout>

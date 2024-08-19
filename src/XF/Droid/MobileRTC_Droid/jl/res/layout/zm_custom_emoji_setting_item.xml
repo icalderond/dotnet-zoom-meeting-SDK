@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:id="@+id/selectBGView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        zoom:layout_constraintDimensionRatio="h,1:1"
+        android:padding="4dp"
+        zoom:layout_constraintTop_toTopOf="parent"
+        zoom:layout_constraintBottom_toBottomOf="parent"
+        zoom:layout_constraintLeft_toLeftOf="parent"
+        zoom:layout_constraintRight_toRightOf="parent"
+        android:background="@drawable/zm_v2_light_bg">
+
+        <ImageView
+            android:id="@+id/image"
+            android:contentDescription="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            tools:src="@drawable/zm_ic_setting_zoom"/>
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/selectFGView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        zoom:layout_constraintTop_toTopOf="@+id/selectBGView"
+        zoom:layout_constraintBottom_toBottomOf="@+id/selectBGView"
+        zoom:layout_constraintLeft_toLeftOf="@+id/selectBGView"
+        zoom:layout_constraintRight_toRightOf="@+id/selectBGView"
+        android:background="@drawable/zm_sticker_select_bg_line" >
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right|bottom"
+            android:src="@drawable/ic_custom_emoji_item_selected"
+            android:importantForAccessibility="no" />
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

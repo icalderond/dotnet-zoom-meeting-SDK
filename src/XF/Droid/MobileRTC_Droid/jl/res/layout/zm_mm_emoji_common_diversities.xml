@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/panelCommonEmojis"
+    android:background="@color/zm_white"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+    <ViewStub
+        android:id="@+id/subEmojiTextView"
+        android:inflatedId="@+id/inflatedEmojiTextView"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <ViewStub
+        android:id="@+id/subEmojiTextView1"
+        android:inflatedId="@+id/inflatedEmojiTextView1"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+
+    <ViewStub
+        android:id="@+id/subEmojiTextView2"
+        android:inflatedId="@+id/inflatedEmojiTextView2"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <ViewStub
+        android:id="@+id/subEmojiTextView3"
+        android:inflatedId="@+id/inflatedEmojiTextView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+    <ViewStub
+        android:id="@+id/subEmojiTextView4"
+        android:inflatedId="@+id/inflatedEmojiTextView4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+    <ViewStub
+        android:id="@+id/subEmojiTextView5"
+        android:inflatedId="@+id/inflatedEmojiTextView5"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        />
+
+</LinearLayout>

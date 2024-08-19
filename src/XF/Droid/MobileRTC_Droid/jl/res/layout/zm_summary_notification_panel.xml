@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2021. Zoom Video Communication. All rights reserved.
+  ~ Created by Jake Wang on 6/29/21 8:03 AM
+  ~ Last modified 6/29/21 8:02 AM
+  ~
+  -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dynamicLegalSummary"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/zm_margin_large"
+    android:gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/zm_immersive_download_progress_view_bg"
+        android:orientation="horizontal">
+
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="@dimen/zm_padding_small"
+            app:alignContent="flex_start"
+            app:alignItems="flex_start"
+            app:flexWrap="wrap"
+            app:showDivider="middle">
+
+            <us.zoom.uicommon.widget.view.ZMCommonTextView
+                android:id="@+id/txtSummaryNotice"
+                style="@style/ZMTextView.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/zm_padding_small"
+                android:text="@string/zm_iq_summary_status_on_490934"
+                android:textColor="@color/zm_v1_white" />
+
+            <us.zoom.uicommon.widget.view.ZMCommonTextView
+                android:id="@+id/btnLegalSummary"
+                style="@style/ZMTextView.Normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_data_privacy_transcript"
+                android:drawablePadding="@dimen/zm_padding_small"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:paddingLeft="@dimen/zm_padding_small"
+                android:text="@string/zm_summary_warning_490934"
+                android:textColor="@color/zm_v1_white" />
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <ImageView
+            android:id="@+id/summaryBtnClose"
+            android:layout_width="@dimen/zm_btn_height_32dp"
+            android:layout_height="@dimen/zm_btn_height_32dp"
+            android:layout_gravity="center"
+            android:contentDescription="@string/zm_btn_close"
+            android:padding="@dimen/zm_padding_small"
+            android:scaleType="fitCenter"
+            android:src="@drawable/zm_btn_legal_tip_close_light" />
+    </LinearLayout>
+
+</LinearLayout>

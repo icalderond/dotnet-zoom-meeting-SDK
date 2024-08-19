@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/zm_mm_share_invite_link_welcome_to_zoom_title_459929"
+        android:textColor="@color/zm_v2_txt_information_bold"
+        android:textSize="20sp" />
+
+    <FrameLayout
+        android:id="@+id/rightButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <Button
+            android:id="@+id/btnClose"
+            style="@style/ZmTitleBarAction.Tablet"
+            android:text="@string/zm_btn_close"
+            android:visibility="gone" />
+        <ImageButton
+            android:src="@drawable/zm_close_button"
+            android:id="@+id/btnBack"
+            style="@style/ZmBackButton.Dark"
+            android:contentDescription="@string/zm_btn_back" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:text="@string/zm_mm_share_invite_link_welcome_to_zoom_sub_title_459929"
+        android:textColor="@color/zm_v2_txt_information_bold"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zm_share_invite_link_holder"
+        android:contentDescription="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/request_to_join_btn"
+        style="@style/ZmButton"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/zm_mm_share_invite_link_welcome_to_zoom_request_to_join_459929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/no_thanks_btn"
+        style="@style/ZmButtonGray"
+        android:layout_width="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/zm_mm_share_invite_link_welcome_to_zoom_no_thanks_459929"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/request_to_join_btn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

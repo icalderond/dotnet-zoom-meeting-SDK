@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar"
+        android:elevation="0dp"
+        zoom:zm_leftButton="@+id/btnBack"
+        zoom:zm_title="@+id/txtTitle">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            style="@style/ZmBackButton"
+            android:contentDescription="@string/zm_btn_back" />
+
+        <TextView
+            android:id="@+id/txtTitle"
+            style="@style/ZmTitleBarTitle"
+            android:text="@string/zm_signup_verification_442801" />
+
+
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/zm_margin_64dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/ZmTextView.Title.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_small_minus_size"
+                android:layout_marginRight="@dimen/zm_margin_small_minus_size"
+                android:maxLines="1"
+                android:text="@string/zm_signup_verify_code_442801" />
+
+
+            <TextView
+                android:id="@+id/zm_signup_verification_email_textview"
+                style="@style/ZmTextView.Content.Primary.MediumPlus.Dimmed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_dialog_margin_16dp"
+                android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+                android:layout_marginRight="@dimen/zm_dialog_margin_16dp"
+                android:maxLines="3"
+                android:text="@string/zm_signup_verify_code_tips_442801" />
+
+            <com.zipow.videobox.login.view.ZmVerifySmsCodeView
+                android:id="@+id/zm_signup_verification_verifyCode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_margin_larger_size" />
+
+            <LinearLayout
+                android:id="@+id/zm_signup_verification_invalidwarn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                android:layout_marginTop="@dimen/zm_dialog_margin_24dp"
+                android:layout_marginRight="@dimen/zm_margin_medium_size"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/zm_dialog_margin_16dp"
+                    android:layout_height="@dimen/zm_dialog_margin_16dp"
+                    android:layout_gravity="center_vertical"
+                    android:contentDescription="todo"
+                    android:src="@drawable/zm_signup_verification_error" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/zm_margin_small"
+                    android:gravity="center"
+                    android:text="@string/zm_signup_invalid_verify_code_442801"
+                    android:textColor="@color/zm_v1_red_A120"
+                    android:textSize="@dimen/zm_ui_kit_text_size_13sp" />
+
+            </LinearLayout>
+
+            <us.zoom.uicommon.widget.view.ZMCommonTextView
+                android:id="@+id/zm_signup_verification_countdown"
+                style="@style/UIKitButton.Small.NoBackground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/zm_dialog_margin_24dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:textColor="@color/zm_v2_tab_text_unselected" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_medium_size"
+                android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                android:layout_marginRight="@dimen/zm_margin_medium_size"
+                android:layout_marginBottom="@dimen/zm_margin_large"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <us.zoom.uicommon.widget.view.ZMCommonTextView
+                    android:id="@+id/descText"
+                    style="@style/UIKitButton.Small.NoBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="@string/zm_otp_not_get_code_344945"
+                    android:textColor="@color/zm_v2_txt_primary"
+                    android:visibility="gone" />
+
+                <us.zoom.uicommon.widget.view.ZMCommonTextView
+                    android:id="@+id/resend"
+                    style="@style/UIKitButton.Small.OnLight.NoBackground"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/zm_margin_smallest"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:visibility="gone"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

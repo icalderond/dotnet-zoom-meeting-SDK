@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="@color/zm_signin_status_bg"></solid>
+    <stroke
+        android:width="@dimen/zm_dimen_stroke_smallest"
+        android:color="@color/zm_signin_status_stroke_bg" />
+    <corners android:radius="@dimen/zm_ui_kit_button_corners"></corners>
+    <padding
+        android:left="@dimen/zm_padding_smallest"
+        android:right="@dimen/zm_padding_smallest" />
+</shape>

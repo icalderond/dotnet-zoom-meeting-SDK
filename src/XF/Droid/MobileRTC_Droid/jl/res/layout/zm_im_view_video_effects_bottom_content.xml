@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/zm_v1_gray_2150">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="@dimen/zm_margin_smaller_size"
+        android:layout_marginEnd="@dimen/zm_margin_smaller_size"
+        android:background="@color/zm_transparent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabBackground="@color/zm_transparent"
+        app:tabIndicatorHeight="0dp"
+        app:tabMinWidth="@dimen/zm_margin_small_minus_size"
+        app:tabMode="scrollable"
+        app:tabPaddingEnd="@dimen/zm_padding_smallest_size"
+        app:tabPaddingStart="@dimen/zm_padding_smaller_size"
+        app:tabSelectedTextColor="@color/zm_v1_white_500"
+        app:tabTextAppearance="@style/ZmIMVideoEffectTabLayoutTextStyle"
+        app:tabTextColor="@color/zm_v1_white_alpha54" />
+
+    <ImageView
+        android:id="@+id/closeVBPanel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/zm_margin_smaller_size"
+        android:contentDescription="@string/zm_btn_close"
+        android:src="@drawable/ic_close_vb_panel"
+        app:layout_constraintBottom_toBottomOf="@id/tabLayout"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tabLayout" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/zm_margin_smaller_size"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

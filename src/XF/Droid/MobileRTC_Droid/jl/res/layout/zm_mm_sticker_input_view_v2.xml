@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/panelType"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:background="@color/zm_white"
+        android:layout_gravity="bottom"
+        android:paddingTop="@dimen/zm_padding_smallest_size"
+        android:paddingBottom="@dimen/zm_padding_smallest_size"
+        android:layout_marginLeft="@dimen/zm_margin_small_size"
+        android:layout_height="@dimen/zm_btn_width_48dp" />
+
+</FrameLayout>

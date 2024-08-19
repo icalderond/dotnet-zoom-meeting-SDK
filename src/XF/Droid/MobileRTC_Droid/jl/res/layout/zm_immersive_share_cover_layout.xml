@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <ProgressBar
+        android:id="@+id/waitingShareProgressBar"
+        style="@style/ZMProgressBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/txtMsgWaitingShare"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:id="@+id/txtMsgWaitingShare"
+        style="@style/ZMTextView.Medium.OnDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:gravity="center"
+        android:text="@string/zm_msg_waiting_share"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/waitingShareProgressBar" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/panelWaitingShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="waitingShareProgressBar,txtMsgWaitingShare"
+        tools:visibility="visible" />
+
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:id="@+id/txtSharingTitle"
+        style="@style/ZMTextView.Medium.OnDark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="@string/zm_msg_sharing"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:visibility="visible" />
+
+
+</merge>

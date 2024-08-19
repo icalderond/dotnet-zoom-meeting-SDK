@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:background="@drawable/zm_list_selector_white_bg"
+    android:minHeight="@dimen/zm_chat_session_item_min_height"
+    android:paddingLeft="@dimen/zm_padding_larger_size"
+    android:paddingRight="@dimen/zm_padding_larger_size">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="@dimen/zm_emoji_view_size_30dp"
+        android:layout_height="@dimen/zm_emoji_view_size_30dp"
+        tools:src="@drawable/zm_emoji_0"
+        android:visibility="gone"
+        tools:visibility="visible"
+        android:importantForAccessibility="no" />
+
+    <ViewStub
+        android:id="@+id/subEmojiTextView"
+        android:inflatedId="@+id/inflatedEmojiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/shortcut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="22dp"
+        style="@style/UIKitTextView.CellTitle"
+        tools:text=":smiley:">
+
+    </TextView>
+
+</LinearLayout>

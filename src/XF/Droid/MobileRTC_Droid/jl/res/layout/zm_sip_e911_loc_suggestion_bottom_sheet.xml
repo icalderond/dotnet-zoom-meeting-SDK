@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dialog_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/zm_padding_smallest_minus_size">
+
+    <LinearLayout
+        android:id="@+id/content_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/zm_margin_smallest_size"
+        android:layout_marginRight="@dimen/zm_margin_smallest_size"
+        android:background="@drawable/zm_bottom_sheet_round_rect_bg"
+        android:maxWidth="400dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_margin_small_size"
+            android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+            android:layout_marginRight="@dimen/zm_margin_small_size"
+            android:layout_marginBottom="@dimen/zm_margin_small_minus_size"
+            android:gravity="left"
+            style="@style/ZmTextView.Content.Primary.Medium"
+            android:maxLines="4"
+            android:text="@string/zm_pbx_emergency_calling_addr_suggest_desc_475046"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/zm_margin_small_size"
+            android:layout_marginRight="@dimen/zm_margin_small_size"
+            android:gravity="center"
+            android:background="@drawable/zm_bottom_sheet_round_rect_white_bg"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/txtTitleAddr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_small_size"
+                android:layout_marginTop="@dimen/zm_margin_small_size"
+                android:layout_marginRight="@dimen/zm_margin_small_size"
+                style="@style/ZmTextView.Content.Primary.Dimmed"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="@string/zm_pbx_emergency_calling_addr_suggest_title_suggested_475046" />
+
+            <TextView
+                android:id="@+id/txtAddr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_small_size"
+                android:layout_marginRight="@dimen/zm_margin_small_size"
+                android:layout_marginBottom="@dimen/zm_margin_smaller_size"
+                style="@style/ZmTextView.Content.Primary"
+                android:maxLines="4"
+                android:gravity="left"
+                android:padding="0dp"
+                tools:text="111 aaaaa \n bbbbbb \n cccccccc \n dddddd" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/zm_margin_small_size"
+                android:layout_marginTop="@dimen/zm_margin_smallest_size"
+                android:layout_marginEnd="@dimen/zm_margin_small_size"
+                android:layout_marginBottom="@dimen/zm_margin_smallest_size"
+                android:background="@drawable/zm_sip_e911_divider" />
+
+            <TextView
+                android:id="@+id/txtTitleAddr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_small_size"
+                android:layout_marginTop="@dimen/zm_margin_smaller_size"
+                android:layout_marginRight="@dimen/zm_margin_small_size"
+                style="@style/ZmTextView.Content.Primary.Dimmed"
+                android:gravity="left"
+                android:padding="0dp"
+                android:text="@string/zm_pbx_emergency_calling_addr_suggest_title_entered_475046" />
+
+            <TextView
+                android:id="@+id/txtAddr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/zm_margin_small_size"
+                android:layout_marginBottom="@dimen/zm_margin_small_size"
+                android:layout_marginRight="@dimen/zm_margin_small_size"
+                style="@style/ZmTextView.Content.Primary"
+                android:maxLines="4"
+                android:gravity="left"
+                android:padding="0dp"
+                tools:text="111 aaaaa \n bbbbbb \n cccccccc \n dddddd" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnUseSuggestion"
+            style="@style/ZmButton.Medium.Text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_btn_medium_height"
+            android:layout_marginLeft="@dimen/zm_margin_small_size"
+            android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+            android:layout_marginRight="@dimen/zm_margin_small_size"
+            android:background="@drawable/zm_v2_bg_large_primary_btn"
+            android:fontFamily="sans-serif"
+            android:text="@string/zm_pbx_emergency_calling_addr_suggest_btn_use_475046"
+            android:textColor="@color/zm_v2_btn_white_text_color" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/ZmButton.Medium.Text"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zm_btn_medium_height"
+            android:layout_marginLeft="@dimen/zm_margin_small_size"
+            android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+            android:layout_marginRight="@dimen/zm_margin_small_size"
+            android:layout_marginBottom="@dimen/zm_margin_small_minus_size"
+            android:background="@drawable/zm_v2_bg_action_sheet_cancel_btn"
+            android:fontFamily="sans-serif"
+            android:text="@string/zm_btn_cancel"
+            android:textColor="@color/zm_v2_btn_black_text_color" />
+    </LinearLayout>
+
+</RelativeLayout>

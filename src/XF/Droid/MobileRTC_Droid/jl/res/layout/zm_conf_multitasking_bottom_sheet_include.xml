@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/zm_multitasking_bottom_sheet_root"
+    style="@style/Widget.Material3.BottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:backgroundTint="@color/zm_v1_gray_2150"
+    app:layout_behavior="com.zipow.videobox.conference.ui.container.control.scrollable.ZmMultitaskingBottomSheetBehavior">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/pull_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:clickable="true"
+        android:focusable="true"
+        android:contentDescription="@string/zm_ax_multitasking_container_split_screen_divider_553564"
+        >
+        <ImageView
+            android:layout_width="@dimen/zm_multitasking_pullbar_width"
+            android:layout_height="@dimen/zm_multitasking_pullbar_height"
+            android:layout_marginTop="@dimen/zm_margin_small_minus_size"
+            android:layout_marginBottom="@dimen/zm_margin_smallest_size"
+            android:background="@drawable/zm_bottom_draggable_pull_bar_bg" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <FrameLayout
+        android:id="@+id/panel_multitasking_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pull_bar_container"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="visible"
+        tools:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/zm_meeting_bottom_sheet_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/panel_multitasking_title"
+        android:background="@color/zm_v1_gray_2150"
+        android:clickable="true"
+        android:focusable="true" />
+
+</RelativeLayout>

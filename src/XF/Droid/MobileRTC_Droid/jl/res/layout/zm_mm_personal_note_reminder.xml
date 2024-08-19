@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/zm_v2_alert_view_info_bg"
+    android:visibility="visible"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="7dp"
+    android:paddingBottom="7dp"
+    android:paddingStart="4dp"
+    android:paddingEnd="4dp"
+    android:importantForAccessibility="no">
+
+    <us.zoom.zimmsg.emoji.ZmIMEmojiTextView
+        android:id="@+id/txtReminder"
+        style="@style/ZmTextView.Content.Primary.Medium"
+        android:maxLines="@integer/large_lines"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left|center_vertical"
+        android:textSize="@dimen/zm_font_normal_size"
+        android:textColor="@color/zm_im_my_status_banner_text"
+        android:importantForAccessibility="yes"
+        android:contentDescription=""
+        />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterButton
+        android:id="@+id/more_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/zm_mm_status_banner_button"
+        android:background="@android:color/transparent"
+        android:layout_gravity="top"
+        android:importantForAccessibility="yes"
+        android:contentDescription="@string/zm_my_status_context_menu_468926"
+        />
+</LinearLayout>

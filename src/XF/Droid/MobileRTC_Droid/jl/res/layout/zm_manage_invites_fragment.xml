@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar.Dark"
+        zoom:zm_leftButton="@+id/leftButton"
+        zoom:zm_rightButton="@+id/rightLinear"
+        zoom:zm_title="@+id/txtTitle">
+
+        <FrameLayout
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+
+            <Button
+                android:id="@+id/btnClose"
+                style="@style/ZmTitleBarAction.Tablet"
+                android:duplicateParentState="true"
+                android:text="@string/zm_btn_close"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/ZmBackButton.Dark"
+                android:contentDescription="@string/zm_btn_back"
+                android:duplicateParentState="true" />
+        </FrameLayout>
+
+        <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZmTitleBarTitle.Dark"
+            android:text="@string/zm_mm_share_invite_link_invite_share_manage_channel_invites_459929" />
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/zm_v2_msg_bg_from">
+
+        <TextView
+            android:id="@+id/your_channel_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="16dp"
+            android:text="@string/zm_mm_share_invite_link_invite_share_your_channel_inivte_link_459929"
+            android:textColor="@color/zm_v1_gray_D200"
+            android:textSize="16sp"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/time_layout" />
+
+        <TextView
+            android:id="@+id/invite_link_url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_setting_sub_option_item"
+            android:drawableLeft="@drawable/zm_mm_copy_action"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/zm_v2_txt_action"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="16dp"
+            android:textColor="@color/zm_v2_txt_action"
+            tools:text="https://learning.zoom.us/learn"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/your_channel_link" />
+
+
+        <TextView
+            android:id="@+id/reset_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/zm_setting_sub_option_item"
+            android:drawableLeft="@drawable/zm_mm_sync_action"
+            android:drawablePadding="8dp"
+            android:drawableTint="@color/zm_v1_red_A300"
+            android:paddingLeft="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:text="@string/zm_mm_share_invite_link_invite_share_reset_link_459929"
+            android:textColor="@color/zm_v1_red_A300"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/invite_link_url"
+            android:contentDescription="@string/zm_mm_share_invite_link_invite_share_reset_link_content_description_459929"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/settings_background_normal_color"
+            android:paddingTop="8dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="24dp"
+            android:paddingBottom="16dp"
+            android:text="@string/zm_mm_share_invite_link_invite_share_manage_invites_info_459929"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/reset_link" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

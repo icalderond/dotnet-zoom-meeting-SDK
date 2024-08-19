@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar"
+        zoom:zm_leftButton="@+id/leftButton"
+        zoom:zm_rightButton="@+id/btnDone"
+        zoom:zm_title="@+id/txtTitle"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <FrameLayout
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/btnClose"
+                style="@style/ZmTitleBarAction.Tablet"
+                android:duplicateParentState="true"
+                android:text="@string/zm_btn_close"
+                android:visibility="gone" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/ZmBackButton.Dark"
+                android:contentDescription="@string/zm_btn_back"
+                android:duplicateParentState="true"
+                android:src="@drawable/zm_ic_btn_back_black" />
+        </FrameLayout>
+
+        <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZmTitleBarTitle.Dark"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_translation_translation_target_language_header_326809"
+            android:textColor="@color/zm_v2_svg_ic_fill_color_new_style"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            android:textSize="16sp"
+            zoom:layout_constraintRight_toRightOf="parent"
+            zoom:layout_constraintTop_toTopOf="parent" />
+
+        <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+            android:id="@+id/txtSubTitle"
+            style="@style/ZmTitleBarTitle.Dark"
+            android:layout_height="wrap_content"
+            android:textSize="11sp"
+            android:text="@string/zm_translation_translation_setting_preferred_language_title_326809"
+            android:textColor="@color/zm_v2_svg_ic_fill_color_new_style"
+            zoom:layout_constraintLeft_toLeftOf="parent"
+            zoom:layout_constraintRight_toRightOf="parent"
+            zoom:layout_constraintTop_toBottomOf="@id/txtTitle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/translation_targets_recycle_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        zoom:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

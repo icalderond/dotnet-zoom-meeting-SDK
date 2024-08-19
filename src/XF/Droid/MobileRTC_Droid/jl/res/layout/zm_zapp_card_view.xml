@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/panelMsgLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:importantForAccessibility="yes"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/zm_padding_normal_size"
+    android:paddingTop="@dimen/zm_padding_smallest_size"
+    android:paddingRight="@dimen/zm_padding_normal_size"
+    android:paddingBottom="@dimen/zm_padding_smallest_size">
+
+    <ViewStub
+        android:id="@+id/messageHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout="@layout/zm_mm_starred_message_header_view"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <ViewStub
+        android:id="@+id/subMsgMetaView"
+        android:inflatedId="@+id/inflatedMsgMetaView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        />
+
+    <include
+        layout="@layout/zm_mm_starred_message_title_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <com.zipow.videobox.view.AvatarView
+            android:id="@+id/avatarView"
+            android:layout_width="@dimen/zm_avatar_small_size"
+            android:layout_height="@dimen/zm_avatar_small_size"
+            android:layout_marginRight="8dp"
+            app:zm_avatarBorderSize="0dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/panel_textMessage"
+            android:layout_width="@dimen/zm_mm_bubble_file_width"
+            android:layout_height="wrap_content"
+            android:background="@drawable/zm_new_unsupport_view_rounded_white"
+            android:paddingStart="@dimen/zm_padding_normal_size"
+            android:paddingTop="@dimen/zm_padding_medium_size"
+            android:paddingBottom="@dimen/zm_padding_normal_size">
+
+            <TextView
+                android:id="@+id/zm_zapp_invite_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxLines="@integer/maximum_lines"
+                android:textColor="@color/zm_v2_txt_secondary"
+                android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:text="Michael Gold is inviting you to use Dropbox Spaces" />
+
+            <ImageView
+                android:id="@+id/zm_zapp_icon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginTop="@dimen/zm_margin_small"
+                android:src="@drawable/ic_data_privacy"
+                app:layout_constraintStart_toStartOf="@id/zm_zapp_invite_text"
+                app:layout_constraintTop_toBottomOf="@id/zm_zapp_invite_text"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/zm_zapp_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/zm_margin_small"
+                android:layout_marginEnd="@dimen/zm_margin_normal"
+                android:textColor="@color/zm_v2_txt_primary"
+                android:textSize="@dimen/zm_font_medium_size"
+                app:layout_constraintBottom_toBottomOf="@id/zm_zapp_icon"
+                app:layout_constraintEnd_toStartOf="@id/zm_zapp_button"
+                app:layout_constraintStart_toEndOf="@id/zm_zapp_icon"
+                app:layout_constraintTop_toTopOf="@id/zm_zapp_icon"
+                tools:text="Dropbox Spaces" />
+
+            <Button
+                android:id="@+id/zm_zapp_button"
+                style="@style/ZmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/zm_btn_height_32dp"
+                android:layout_marginEnd="@dimen/zm_margin_normal"
+                android:minHeight="@dimen/zm_btn_height_32dp"
+                android:textAllCaps="false"
+                app:layout_constraintBottom_toBottomOf="@id/zm_zapp_icon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/zm_zapp_icon"
+                tools:text="Open" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/zm_mm_starred"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/zm_mm_starred_icon_on_v2"
+            android:visibility="gone"
+            tools:ignore="ContentDescription" />
+
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@style/ZMProgressBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp" />
+
+        <ImageView
+            android:id="@+id/imgStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/zm_mm_msg_state_fail"
+            tools:ignore="ContentDescription" />
+        <!-- This image is useless in this view -->
+    </LinearLayout>
+
+    <include
+        layout="@layout/zm_message_pin_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_smaller_size" />
+
+    <include
+        layout="@layout/zm_message_reaction_labels_view_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp" />
+</LinearLayout>

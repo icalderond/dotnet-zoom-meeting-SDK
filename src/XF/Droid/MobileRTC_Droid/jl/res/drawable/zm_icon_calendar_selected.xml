@@ -1,0 +1,18 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+  <path
+      android:pathData="M6.5,1H9.5V3C9.5,3.828 10.172,4.5 11,4.5C11.828,4.5 12.5,3.828 12.5,3V1.009C13.365,1.029 13.912,1.098 14.362,1.327C14.927,1.615 15.385,2.074 15.673,2.638C15.943,3.169 15.99,3.835 15.998,5H0.002C0.01,3.835 0.057,3.169 0.327,2.638C0.615,2.074 1.074,1.615 1.638,1.327C2.088,1.098 2.635,1.029 3.5,1.009V3C3.5,3.828 4.172,4.5 5,4.5C5.828,4.5 6.5,3.828 6.5,3V1Z"
+      android:fillColor="@color/zm_v2_tab_path_selected"/>
+  <path
+      android:pathData="M0,6V11.2C0,12.88 0,13.72 0.327,14.362C0.615,14.927 1.074,15.385 1.638,15.673C2.28,16 3.12,16 4.8,16H11.2C12.88,16 13.72,16 14.362,15.673C14.927,15.385 15.385,14.927 15.673,14.362C16,13.72 16,12.88 16,11.2V6H0Z"
+      android:fillColor="@color/zm_v2_tab_path_selected"/>
+  <path
+      android:pathData="M11.5,0.5V3C11.5,3.276 11.276,3.5 11,3.5C10.724,3.5 10.5,3.276 10.5,3V0.5C10.5,0.224 10.724,0 11,0C11.276,0 11.5,0.224 11.5,0.5Z"
+      android:fillColor="@color/zm_v2_tab_path_selected"/>
+  <path
+      android:pathData="M5.5,0.5C5.5,0.224 5.276,0 5,0C4.724,0 4.5,0.224 4.5,0.5V3C4.5,3.276 4.724,3.5 5,3.5C5.276,3.5 5.5,3.276 5.5,3V0.5Z"
+      android:fillColor="@color/zm_v2_tab_path_selected"/>
+</vector>

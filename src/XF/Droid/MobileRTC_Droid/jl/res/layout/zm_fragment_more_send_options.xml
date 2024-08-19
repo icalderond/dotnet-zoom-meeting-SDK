@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/zm_bottom_sheet_half_rect_bg">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/header_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <us.zoom.uicommon.widget.view.ZMCommonTextView
+                style="@style/ZmTitleBarTitle.Dark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/zm_scheduled_message_more_send_options_479453"
+                android:textColor="@color/zm_v2_btn_black_text_color"
+                android:textSize="@dimen/zm_ui_kit_text_size_24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/zm_dialog_margin_16dp"
+            app:layout_constraintTop_toBottomOf="@id/header_layout"
+            android:background="@color/zm_v2_cell_divider" />
+        <us.zoom.uicommon.widget.view.ZMButton
+            android:id="@+id/schedule_message_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_scheduled_message_more_schedule_message_479453"
+            android:textAllCaps="false"
+            android:textSize="@dimen/zm_ui_kit_text_size_17sp"
+            android:textColor="@color/zm_v2_txt_primary"
+            android:padding="@dimen/zm_dialog_margin_16dp"
+            android:gravity="left|center_vertical"
+            app:layout_constraintTop_toBottomOf="@id/divider1"/>
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/zm_dialog_margin_16dp"
+            app:layout_constraintTop_toBottomOf="@id/schedule_message_button"
+            android:background="@color/zm_v2_cell_divider" />
+        <us.zoom.uicommon.widget.view.ZMButton
+            android:id="@+id/close_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_scheduled_message_more_close_479453"
+            android:textAllCaps="false"
+            android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+            android:textStyle="normal"
+            android:textColor="@color/zm_v2_txt_secondary"
+            android:padding="@dimen/zm_dialog_margin_16dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/divider2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

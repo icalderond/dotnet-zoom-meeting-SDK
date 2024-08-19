@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+  <path
+      android:pathData="M60.02,31.09C56.66,31.09 54.02,33.98 54.31,37.33L57.16,69.42C57.29,70.89 58.52,72.01 59.99,72.01C61.46,72.01 62.69,70.89 62.82,69.43L65.73,37.35C66.04,33.99 63.39,31.09 60.02,31.09Z"
+      android:fillColor="@color/zm_v2_svg_pbx_nfc_sign_fail_color"/>
+  <path
+      android:pathData="M55.66,89.26C56.87,90.19 58.32,90.66 60.03,90.66C61.68,90.66 63.11,90.22 64.32,89.34C65.58,88.4 66.22,86.75 66.22,84.39C66.22,82.03 65.58,80.4 64.32,79.52C63.11,78.64 61.68,78.2 60.03,78.2C58.32,78.2 56.87,78.64 55.66,79.52C54.45,80.4 53.84,82.03 53.84,84.39C53.84,86.7 54.45,88.32 55.66,89.26Z"
+      android:fillColor="@color/zm_v2_svg_pbx_nfc_sign_fail_color"/>
+  <path
+      android:pathData="M120,60C120,93.14 93.14,120 60,120C26.86,120 0,93.14 0,60C0,26.86 26.86,0 60,0C93.14,0 120,26.86 120,60ZM112.5,60C112.5,89 89,112.5 60,112.5C31.01,112.5 7.5,89 7.5,60C7.5,31.01 31.01,7.5 60,7.5C89,7.5 112.5,31.01 112.5,60Z"
+      android:fillColor="@color/zm_v2_svg_pbx_nfc_sign_fail_color"
+      android:fillType="evenOdd"/>
+</vector>

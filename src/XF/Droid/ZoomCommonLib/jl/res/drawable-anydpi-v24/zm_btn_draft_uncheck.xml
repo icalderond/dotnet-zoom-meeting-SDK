@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="40dp"
+    android:height="40dp"
+    android:viewportWidth="40"
+    android:viewportHeight="40">
+  <path
+      android:pathData="M11.5,20C11.5,24.694 15.306,28.5 20,28.5C24.694,28.5 28.5,24.694 28.5,20C28.5,15.306 24.694,11.5 20,11.5C15.306,11.5 11.5,15.306 11.5,20ZM20,10C14.477,10 10,14.477 10,20C10,25.523 14.477,30 20,30C25.523,30 30,25.523 30,20C30,14.477 25.523,10 20,10Z"
+      android:fillColor="@color/zm_draft_uncheck_button"
+      android:fillAlpha="0.56"
+      android:fillType="evenOdd"/>
+</vector>

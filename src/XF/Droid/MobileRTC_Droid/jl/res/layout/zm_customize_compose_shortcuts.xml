@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/zm_titlebar_height"
+        android:background="@color/zm_white"
+        android:gravity="center_vertical"
+        zoom:zm_leftButton="@+id/leftButton"
+        zoom:zm_rightButton="@+id/rightLinear"
+        zoom:zm_title="@+id/txtTitle" >
+
+        <FrameLayout
+            android:id="@+id/leftButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical">
+            <ImageButton
+                android:id="@+id/btnBack"
+                style="@style/ZmBackButton.Dark"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/zm_ic_back_arrow_new_style"
+                android:duplicateParentState="true"
+                android:layout_marginLeft="8dp"
+                android:contentDescription="@string/zm_btn_back" />
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/rightLinear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/moreOptionsBtn"
+                style="@style/ZmBackButton.Dark"
+                android:src="@drawable/zm_ic_more_option_new_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="center"
+                android:layout_marginRight="14dp"
+                android:paddingRight="0dp"
+                android:contentDescription="@string/zm_description_mm_btn_more" />
+        </LinearLayout>
+
+        <us.zoom.uicommon.widget.view.ZMDynTextSizeTextView
+            android:id="@+id/txtTitle"
+            style="@style/ZmTitleBarTitle"
+            android:text="@string/zm_mm_customize_compose_shortcuts_page_title_437830" />
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/zm_v2_primary_divider" />
+
+    <us.zoom.uicommon.widget.view.ZMTextView
+        android:id="@+id/txtDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingVertical="@dimen/zm_padding_medium"
+        android:paddingHorizontal="@dimen/zm_padding_normal"
+        android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+        android:textColor="@color/zm_v2_txt_secondary"
+        android:background="@color/zm_white"
+        android:visibility="gone"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/shortcutsRV"
+        android:background="@color/zm_white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</LinearLayout>

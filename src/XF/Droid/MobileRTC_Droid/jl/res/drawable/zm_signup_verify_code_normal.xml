@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:width="@dimen/zm_view_height_40dp"
+        android:height="@dimen/zm_text_normal_height">
+        <shape android:shape="rectangle">
+            <solid android:color="@color/zm_transparent" />
+        </shape>
+    </item>
+    <item
+        android:gravity="center"
+        android:left="@dimen/zm_margin_small_6dp"
+        android:right="@dimen/zm_margin_small_6dp">
+        <shape android:shape="line">
+            <stroke
+                android:width="2dp"
+                android:color="@color/zm_signup_verification_dash_color" />
+        </shape>
+    </item>
+</layer-list>
+

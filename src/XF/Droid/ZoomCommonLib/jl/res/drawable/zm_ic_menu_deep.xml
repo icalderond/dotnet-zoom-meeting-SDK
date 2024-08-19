@@ -1,0 +1,9 @@
+<vector android:autoMirrored="true"
+    android:height="9dp"
+    android:viewportHeight="10"
+    android:viewportWidth="16"
+    android:width="16dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillType="evenOdd"
+        android:pathData="M0,1.063C0,0.752 0.448,0.5 1,0.5H15C15.552,0.5 16,0.752 16,1.063C16,1.373 15.552,1.625 15,1.625H1C0.448,1.625 0,1.373 0,1.063ZM0,5C0,4.689 0.448,4.438 1,4.438H15C15.552,4.438 16,4.689 16,5C16,5.311 15.552,5.563 15,5.563H1C0.448,5.563 0,5.311 0,5ZM0,8.938C0,8.627 0.448,8.375 1,8.375H15C15.552,8.375 16,8.627 16,8.938C16,9.248 15.552,9.5 15,9.5H1C0.448,9.5 0,9.248 0,8.938Z"
+        android:fillColor="@color/zm_v2_im_keyboard_panel_unselected"/>
+</vector>

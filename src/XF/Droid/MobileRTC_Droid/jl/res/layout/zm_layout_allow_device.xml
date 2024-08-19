@@ -1,0 +1,133 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_window_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZMTitleBar.Light"
+        android:background="@drawable/zm_window_bg"
+        zoom:zm_leftButton="@+id/btnLeft"
+        zoom:zm_title="@+id/txtTitle">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnLeft"
+            android:layout_marginTop="@dimen/zm_padding_medium_size"
+            android:layout_gravity="left|center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zm_btn_cancel"
+                android:visibility="gone"
+                android:gravity="left|bottom"
+                style="@style/UIKitButton.Medium.OnLight.NoBackground"
+                android:contentDescription="@string/zm_btn_cancel" />
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:gravity="left|bottom"
+                style="@style/ZMBackButton.OnLight"
+                android:contentDescription="@string/zm_btn_back" />
+        </LinearLayout>
+
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/zm_padding_smallest_size"
+            android:paddingRight="@dimen/zm_padding_smallest_size"
+            android:layout_marginLeft="@dimen/zm_margin_medium_size"
+            android:layout_marginTop="@dimen/zm_padding_medium_size"
+            android:textStyle="bold"
+            android:textSize="@dimen/zm_font_large_size"
+            android:layout_gravity="center_vertical|bottom"
+            android:textColor="@color/zm_v2_txt_title_header"
+            android:text="@string/zm_allow_device_title_382015"/>
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:id="@+id/txtAllowDesc"
+        style="@style/ZMTextView.Normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_large"
+        android:layout_marginTop="@dimen/zm_margin_64dp"
+        android:layout_marginRight="@dimen/zm_margin_large"
+        android:gravity="center"
+        android:text="@string/zm_allow_device_desc_468352" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_large"
+        android:layout_marginTop="@dimen/zm_margin_small"
+        android:gravity="center"
+        android:layout_marginRight="@dimen/zm_margin_large">
+
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            android:id="@+id/txtNotification"
+            style="@style/ZMTextView.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/zm_v2_svg_ic_video_meeting"
+            android:text="@string/zm_allow_device_no_notification_468352" />
+
+        <Button
+            android:id="@+id/btnResend"
+            style="@style/UIKitButton.Medium.OnLight.NoBackground"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/txtNotification"
+            android:contentDescription="@string/zm_msg_resend_70707"
+            android:gravity="left|center_vertical"
+            android:text="@string/zm_msg_resend_70707"
+            android:layout_marginLeft="2dp"
+            android:textSize="@dimen/zm_ui_kit_text_size_14sp"
+            android:visibility="gone"
+            tools:visibility="visible" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_allow_device_margin_top"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            android:id="@+id/txtVerifyOTP"
+            style="@style/ZMTextView.Normal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/zm_allow_device_or_468352" />
+
+        <Button
+            android:id="@+id/btnVerifyOTP"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            style="@style/UIKitButton.Medium.OnLight.NoBackground"
+            android:text="@string/zm_allow_device_verify_468352"
+            android:visibility="visible"
+            android:contentDescription="@string/zm_allow_device_verify_468352" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

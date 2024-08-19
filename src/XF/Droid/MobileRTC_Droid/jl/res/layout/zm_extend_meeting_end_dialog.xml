@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/zm_white"
+    android:paddingLeft="@dimen/zm_pbx_message_min_image_height"
+    android:paddingRight="@dimen/zm_pbx_message_min_image_height">
+
+    <LinearLayout
+        android:id="@+id/panelActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            style="@style/ZmTextView.Title.Medium"
+            android:background="@color/zm_transparent"
+            android:id="@+id/tvPairedRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zm_basic_plus_extend_meeting_end_success_extended_result_title_528114"
+            android:drawablePadding="@dimen/zm_padding_smallest"
+            android:layout_marginTop="@dimen/zm_margin_medium_size"
+            android:singleLine="true"
+            android:ellipsize="end"
+            android:layout_gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/panelCenter"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/zm_leave_extend_meeting"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription" />
+
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            android:id="@+id/description_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ZmTextView.Content.Secondary"
+            android:background="@color/zm_transparent"
+            android:text="@string/zm_extend_meeting_end_result_upgrade_duration_564531" />
+
+        <us.zoom.uicommon.widget.view.ZMCommonTextView
+            android:id="@+id/text_content2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/ZmTextView.Content.Secondary"
+            android:gravity="left"
+            android:background="@color/zm_transparent" />
+        <Button
+            style="@style/ZMButton.HappyPath"
+            android:id="@+id/btnOk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="41dp"
+            android:layout_marginTop="@dimen/zm_setting_item_group_spacing"
+            android:layout_marginBottom="@dimen/zm_margin_medium_size"
+            android:text="@string/zm_btn_ok"
+            android:textColor="@color/zm_v2_polling_pre_btn_select_bg"
+            app:layout_constraintTop_toBottomOf="@id/panelCenter"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"/>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout
+        android:id="@+id/panelTitleBar"
+        style="@style/ZmTitleBar"
+        app:zm_leftButton="@+id/btnCancel"
+        app:zm_title="@+id/title">
+
+        <Button
+            android:id="@+id/btnCancel"
+            style="@style/ZmTitleBarAction"
+            android:layout_marginEnd="8dp"
+            android:text="@string/cancel" />
+
+        <TextView
+            android:id="@+id/title"
+            style="@style/ZmTitleBarTitle"
+            android:text="@string/zm_emergency_call_title_where_are_you_475046" />
+
+    </us.zoom.uicommon.widget.view.ZMIOSStyleTitlebarLayout>
+
+    <View
+        android:id="@+id/background_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/zm_round_rect_white_r8"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountryTag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/panelTitleBar" />
+
+    <TextView
+        android:id="@+id/tvAddrLine1Tag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_address_line_1_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toTopOf="@id/background_view" />
+
+    <EditText
+        android:id="@+id/edtAddrLine1"
+        style="@style/ZMEditText.SettingsItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/zm_emergency_call_hint_required_475046"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvAddrLine1Tag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvAddrLine1Tag" />
+
+    <View
+        android:id="@+id/divider1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/tvAddrLine1Tag" />
+
+    <TextView
+        android:id="@+id/tvAddrLine2Tag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_address_line_2_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@+id/divider1" />
+
+    <EditText
+        android:id="@+id/edtAddrLine2"
+        style="@style/ZMEditText.SettingsItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/zm_emergency_call_hint_optional_475046"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvAddrLine2Tag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvAddrLine2Tag" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/tvAddrLine2Tag" />
+
+    <TextView
+        android:id="@+id/tvStateTag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_state_or_province_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+    <EditText
+        android:id="@+id/edtState"
+        style="@style/ZMEditText.SettingsItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/zm_emergency_call_hint_required_475046"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvStateTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvStateTag" />
+
+    <TextView
+        android:id="@+id/tvState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/zm_ic_arrow_right_state"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/zm_v2_txt_primary"
+        android:textColorHint="@color/zm_v2_txt_secondary"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvStateTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvStateTag" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/tvStateTag" />
+
+    <TextView
+        android:id="@+id/tvCityTag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_city_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/divider3" />
+
+    <EditText
+        android:id="@+id/edtCity"
+        style="@style/ZMEditText.SettingsItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/zm_emergency_call_hint_required_475046"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvCityTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvCityTag" />
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/zm_ic_arrow_right_state"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/zm_v2_txt_primary"
+        android:textColorHint="@color/zm_v2_txt_secondary"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/tvCityTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvCityTag" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/tvCityTag" />
+
+    <TextView
+        android:id="@+id/tvZipCodeTag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_zip_code_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/divider4" />
+
+    <EditText
+        android:id="@+id/edtZipCode"
+        style="@style/ZMEditText.SettingsItem"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/zm_emergency_call_hint_required_475046"
+        android:inputType="textPostalAddress"
+        android:maxLines="1"
+        app:layout_constraintBottom_toBottomOf="@id/tvZipCodeTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvZipCodeTag" />
+
+    <View
+        android:id="@+id/divider5"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/zm_line_divider"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/tvZipCodeTag" />
+
+    <TextView
+        android:id="@+id/tvCountryTag"
+        style="@style/ZmSettingItemTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/zm_emergency_call_tag_country_or_region_475046"
+        app:layout_constraintStart_toStartOf="@id/background_view"
+        app:layout_constraintTop_toBottomOf="@id/divider5" />
+
+    <TextView
+        android:id="@+id/tvCountry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        android:drawableEnd="@drawable/zm_ic_arrow_right_state"
+        android:gravity="start|center_vertical"
+        android:textColor="@color/zm_v2_txt_primary"
+        android:textColorHint="@color/zm_v2_txt_secondary"
+        android:textSize="@dimen/zm_ui_kit_text_size_16sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvCountryTag"
+        app:layout_constraintEnd_toEndOf="@id/background_view"
+        app:layout_constraintStart_toStartOf="@id/tag_barrier"
+        app:layout_constraintTop_toTopOf="@id/tvCountryTag"
+        tools:text="United States" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/tag_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="end"
+        app:constraint_referenced_ids="tvAddrLine1Tag,tvAddrLine2Tag,tvStateTag,tvCityTag,tvZipCodeTag,tvCountryTag" />
+
+    <TextView
+        android:id="@+id/tv_license"
+        style="@style/ZmSettingDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/zm_emergency_call_loc_license_475046"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/background_view" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        style="@style/ZmButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/zm_emergency_call_btn_i_am_here_475046"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_license" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gpState"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="tvStateTag,divider3" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gpCity"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="tvCityTag,divider4" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/gpZipCode"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="tvZipCodeTag,edtZipCode,divider5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

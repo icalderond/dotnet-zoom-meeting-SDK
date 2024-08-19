@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="56dp"
+    android:height="56dp"
+    android:viewportWidth="56"
+    android:viewportHeight="56">
+  <path
+      android:pathData="M16,0L40,0A16,16 0,0 1,56 16L56,40A16,16 0,0 1,40 56L16,56A16,16 0,0 1,0 40L0,16A16,16 0,0 1,16 0z"
+      android:fillColor="@color/zm_im_chatlist_panel_icon_bg"/>
+  <group>
+    <clip-path
+        android:pathData="M17.5,17.5C16.672,17.5 16,18.172 16,19V21V37C16,37.828 16.672,38.5 17.5,38.5H38.5C39.328,38.5 40,37.828 40,37V22.5C40,21.672 39.328,21 38.5,21H26.598C26.407,21 26.233,20.891 26.149,20.72L24.983,18.34C24.731,17.826 24.208,17.5 23.636,17.5H17.5Z"
+        android:fillType="evenOdd"/>
+    <path
+        android:pathData="M16,16h24v24h-24z"
+        android:fillColor="@color/zm_im_chatlist_panel_icon"/>
+  </group>
+</vector>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".customview.titlebar.components.endunit.MoreActionComponentStyleState"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <us.zoom.uicommon.widget.view.ZMImageButton
+        android:id="@+id/zm_zapp_send_button"
+        style="@style/ZmMoreButton"
+        android:contentDescription="@string/zm_btn_share"
+        android:src="@drawable/zm_icon_zapp_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/zm_zapp_more_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <us.zoom.uicommon.widget.view.ZMImageButton
+        android:id="@+id/zm_zapp_more_button"
+        style="@style/ZmMoreButton"
+        android:contentDescription="@string/zm_btn_more_no_dot"
+        android:src="@drawable/zm_ic_btn_more_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</merge>

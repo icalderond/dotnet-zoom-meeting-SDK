@@ -1,0 +1,14 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="32dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <path
+      android:pathData="M0,0h32v32h-32z"
+      android:fillColor="@color/zm_pbx_sms_hide_file_tip_fill_icon_slash"/>
+  <path
+      android:pathData="M4.5,6.803V24.439L3.036,25.903C3.012,25.671 3,25.435 3,25.197V6.803C3,3.046 6.046,0 9.803,0H19.1C20.316,0 21.48,0.488 22.333,1.354L24.938,4.001L23.878,5.062L21.264,2.406C20.693,1.826 19.914,1.5 19.1,1.5H9.803C6.874,1.5 4.5,3.874 4.5,6.803ZM4.121,28.94L2.53,30.53C2.237,30.823 1.763,30.823 1.47,30.53C1.177,30.237 1.177,29.763 1.47,29.47L29.47,1.47C29.763,1.177 30.237,1.177 30.53,1.47C30.823,1.763 30.823,2.237 30.53,2.53L26.983,6.078L28.697,7.819C29.532,8.667 30,9.81 30,11.001V25.197C30,28.954 26.954,32 23.197,32H9.803C7.429,32 5.338,30.783 4.121,28.94ZM25.922,7.139L27.628,8.871C28.187,9.439 28.5,10.204 28.5,11.001V25.197C28.5,28.126 26.126,30.5 23.197,30.5H9.803C7.841,30.5 6.128,29.434 5.211,27.85L25.922,7.139Z"
+      android:fillColor="@color/zm_pbx_sms_hide_file_tip_fill_icon_box"
+      android:fillAlpha="0.18"
+      android:fillType="evenOdd"/>
+</vector>

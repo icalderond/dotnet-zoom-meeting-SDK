@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:minHeight="@dimen/zm_chat_session_item_min_height"
+    android:paddingTop="@dimen/zm_padding_smaller_size"
+    android:paddingBottom="@dimen/zm_padding_smaller_size"
+    android:paddingLeft="@dimen/zm_padding_normal_size"
+    android:paddingRight="@dimen/zm_padding_normal_size"
+    android:baselineAligned="false"
+    android:background="@drawable/zm_list_selector_background" >
+
+    <com.zipow.videobox.view.AvatarView
+        android:id="@+id/avatarView"
+        android:layout_width="@dimen/zm_avatar_size"
+        android:layout_height="@dimen/zm_avatar_size"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:duplicateParentState="true"
+        zoom:zm_cornerRadiusRatio="0.32"
+        zoom:zm_description_enable="false"/>
+
+    <us.zoom.zimmsg.emoji.ZmIMSimpleEmojiTextView
+        android:layout_marginLeft="@dimen/zm_margin_smaller_size"
+        style="@style/ZmTextView.Content.Primary"
+        android:paddingLeft="0dp"
+        android:gravity="start|center_vertical"
+        android:paddingRight="@dimen/zm_padding_smaller_size"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxLines="1"
+        android:drawablePadding="5dp"
+        android:text="@string/zm_lbl_archive_view_all_result_502376"
+        tools:text="@string/zm_lbl_archive_view_all_result_502376"/>
+</LinearLayout>

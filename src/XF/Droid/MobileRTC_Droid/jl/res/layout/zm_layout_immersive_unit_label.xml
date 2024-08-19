@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/zm_video_unit_label_bg"
+    android:gravity="center_vertical"
+    android:importantForAccessibility="no"
+    android:paddingStart="@dimen/zm_padding_smallest_minus_size"
+    android:paddingEnd="@dimen/zm_padding_smallest_minus_size">
+
+    <us.zoom.uicommon.widget.view.ZMCommonTextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:importantForAccessibility="no"
+        android:maxLines="1"
+        android:textColor="@color/zm_v1_white"
+        android:textSize="@dimen/zm_ui_kit_text_size_11sp"
+        android:visibility="gone"
+        tools:text="Janus Qin"
+        tools:visibility="visible" />
+
+</LinearLayout>

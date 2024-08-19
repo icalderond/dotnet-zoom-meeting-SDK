@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="@dimen/zm_action_sheet_menu_min_height"
+    android:paddingRight="@dimen/zm_setting_item_padding_right"
+    android:gravity="center"
+    android:background="@drawable/zm_v2_bg_menu">
+
+    <TextView
+        style="@style/ZmTextView.Content.Primary"
+        android:id="@+id/txtCallViaVoIP"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_small_minus_size"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:duplicateParentState="true"
+        android:focusable="false"
+        android:gravity="left"
+        android:text="@string/zm_btn_wifi_or_cellular_data_251315" />
+
+    <ProgressBar
+        android:id="@+id/progressCallVoIP"
+        style="@style/ZMProgressBar.Small"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="@dimen/zm_margin_small_minus_size" />
+</LinearLayout>

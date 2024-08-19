@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@drawable/zm_signup_agreement_bg"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="480dp"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/zm_dialog_margin_16dp">
+
+        <TextView
+            android:id="@+id/zm_signup_agreement_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:text="@string/zm_signup_agreement_506850"
+            android:textColor="@color/zm_signup_verification_dash_color"
+            android:textSize="@dimen/zm_ui_kit_text_size_24sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/zm_signup_agreement_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/zm_signup_agreement_confirm"
+                style="@style/ZmButton"
+                android:text="@string/zm_sip_select_all_61381" />
+
+            <Button
+                android:id="@+id/zm_signup_agreement_cancel"
+                style="@style/ZmButtonGray"
+                android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                android:text="@string/cancel" />
+
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/zm_signup_agreement_btn_layout"
+            android:layout_below="@+id/zm_signup_agreement_textview"
+            android:scrollbars="none">
+
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/zm_signup_agreement_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/zm_margin_normal"
+                    android:fontFamily="sans-serif"
+                    android:gravity="left"
+                    android:text="@string/zm_signup_agreement_desc_506850"
+                    android:textColor="@color/zm_signin_privacy_service_color"
+                    android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/zm_signup_agreement_checkbox1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/zm_checkbox_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/zm_margin_smallest" />
+
+                    <TextView
+                        android:id="@+id/zm_signup_agreement_terms_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:text="@string/zm_signup_agreement_terms_506850"
+                        android:textColor="@color/zm_signin_privacy_service_color"
+                        android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/zm_signup_agreement_checkbox2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/zm_checkbox_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/zm_margin_smallest" />
+
+                    <TextView
+                        android:id="@+id/zm_signup_agreement_collection_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:text="@string/zm_signup_agreement_data_collection_506850"
+                        android:textColor="@color/zm_signin_privacy_service_color"
+                        android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/zm_signup_agreement_email_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/zm_dialog_margin_16dp"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/zm_signup_agreement_checkbox3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@drawable/zm_checkbox_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/zm_margin_smallest" />
+
+                    <TextView
+                        android:id="@+id/zm_signup_agreement_approve_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:fontFamily="sans-serif"
+                        android:gravity="left"
+                        android:text="@string/zm_signup_agreement_approve_desc_506850"
+                        android:textColor="@color/zm_signin_privacy_service_color"
+                        android:textSize="@dimen/zm_ui_kit_text_size_14sp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </ScrollView>
+
+    </RelativeLayout>
+</FrameLayout>

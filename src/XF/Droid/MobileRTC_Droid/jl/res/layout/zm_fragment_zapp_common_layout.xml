@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/zm_window_bg"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- for content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <!-- Title Bar -->
+        <FrameLayout
+            android:id="@+id/zapp_common_title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:visibility="gone"
+            tools:visibility="visible"
+            android:id="@+id/zm_zapp_store_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:max="100"
+            android:min="0"
+            android:layout_height="@dimen/zm_horizentol_progress_bar_height"
+            android:layout_width="match_parent"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!-- webview content -->
+            <FrameLayout
+                android:id="@+id/container_webview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+
+                <FrameLayout
+                    android:id="@+id/panelThumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/zm_transparent">
+
+                    <com.zipow.videobox.conference.ui.view.render.ZmThumbnailRenderView
+                        android:id="@+id/thumbnailRenderView"
+                        android:layout_width="1px"
+                        android:layout_height="1px"
+                        android:layout_gravity="top|right"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:visibility="gone" />
+                </FrameLayout>
+            </FrameLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </LinearLayout>
+
+    <!-- for loading close -->
+    <us.zoom.uicommon.widget.view.ZMSquareImageView
+        android:id="@+id/zm_zapp_loading_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/zm_margin_smaller_size"
+        android:layout_marginEnd="@dimen/zm_margin_smaller_size"
+        android:contentDescription="@string/zm_btn_close"
+        android:src="@drawable/zm_ic_btn_close"
+        android:layout_gravity="right"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+    <!-- for loading wait -->
+    <ProgressBar
+        android:id="@+id/zm_zapp_progress_bar"
+        style="@style/ZMProgressBar.Large"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:indeterminateBehavior="cycle"
+        android:visibility="gone"
+        tools:visibility="visible"/>
+
+</FrameLayout>

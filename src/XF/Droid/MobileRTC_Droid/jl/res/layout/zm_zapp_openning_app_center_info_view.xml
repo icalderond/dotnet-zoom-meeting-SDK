@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".customview.titlebar.components.centerunit.CenterInfoComponentStyleState"
+    tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+    <us.zoom.uicommon.widget.view.ZMSquareImageView
+        android:id="@+id/zm_zapp_openning_app_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:importantForAccessibility="no"
+        app:layout_constraintBottom_toBottomOf="@id/zm_zapp_openning_app_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/zm_zapp_openning_app_icon" />
+
+    <us.zoom.uicommon.widget.view.ZMTextView
+        android:id="@+id/zm_zapp_openning_app_text"
+        style="@style/ZmTitleBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:drawableRight="@drawable/zm_ic_arrow_down"
+        android:ellipsize="end"
+        android:maxLines="1"
+        app:layout_constrainedWidth="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/zm_zapp_openning_app_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/zm_zapps" />
+
+</merge>

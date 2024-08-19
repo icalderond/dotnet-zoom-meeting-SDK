@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="88dp"
+    android:layout_height="wrap_content"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:background="@drawable/zm_list_selector_background">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imgOptIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:background="@null"
+        android:duplicateParentState="true"
+        android:layout_marginTop="7dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_im_chatlist_panel_drafts"
+        />
+
+    <TextView
+        android:id="@+id/txtOptNoteBubble"
+        style="@style/ZMTextView.UnreadMessageCount"
+        android:background="@drawable/zm_bg_badge_red_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:duplicateParentState="true"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="99+"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/txtOptName"
+        style="@style/ZmTextView.Content.Primary.Medium.Dimmed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:duplicateParentState="true"
+        android:maxWidth="82dp"
+        tools:text="@string/zm_starred_list_head_txt_65147"
+        android:textColor="@color/zm_im_chatlist_panel_name"
+        android:ellipsize="end"
+        app:layout_constraintLeft_toLeftOf="@+id/imgOptIcon"
+        app:layout_constraintRight_toRightOf="@+id/imgOptIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgOptIcon"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

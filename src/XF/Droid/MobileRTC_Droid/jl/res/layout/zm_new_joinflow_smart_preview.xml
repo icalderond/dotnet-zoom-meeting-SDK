@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/zm_jbh_float_video_background"
+    android:layout_gravity="center_vertical"
+   >
+    <us.zoom.feature.video.views.ZmPreviewVideoView
+        android:id="@+id/previewVideoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <us.zoom.feature.video.views.ZmPreviewLipsyncAvatarView
+        android:id="@+id/previewLipsyncAvatarView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <ImageView
+        android:id="@+id/userSmartPic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/zm_margin_normal"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/zm_margin_medium_minus_size"
+        android:orientation="horizontal">
+
+        <CheckedTextView
+            android:id="@+id/btnSmartAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkMark="@drawable/btn_audio_state_bg"
+            android:layout_marginRight="@dimen/zm_dialog_margin_16dp"/>
+
+        <CheckedTextView
+            android:id="@+id/btnSmartVideo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkMark="@drawable/btn_video_state_bg" />
+    </LinearLayout>
+</FrameLayout>

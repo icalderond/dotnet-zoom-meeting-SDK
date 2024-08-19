@@ -1,0 +1,4 @@
+<vector android:height="20dp" android:viewportHeight="16"
+    android:viewportWidth="16" android:width="20dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="@color/zm_v2_btn_white_text_color" android:fillType="evenOdd" android:pathData="M4,0C2.343,0 1,1.343 1,3V13C1,14.657 2.343,16 4,16H12C13.657,16 15,14.657 15,13V3C15,1.343 13.657,0 12,0H4ZM4.5,4C4.224,4 4,4.224 4,4.5C4,4.776 4.224,5 4.5,5H11.5C11.776,5 12,4.776 12,4.5C12,4.224 11.776,4 11.5,4H4.5ZM4.5,7.5C4.224,7.5 4,7.724 4,8C4,8.276 4.224,8.5 4.5,8.5H11.5C11.776,8.5 12,8.276 12,8C12,7.724 11.776,7.5 11.5,7.5H4.5ZM4,11.5C4,11.224 4.224,11 4.5,11H11.5C11.776,11 12,11.224 12,11.5C12,11.776 11.776,12 11.5,12H4.5C4.224,12 4,11.776 4,11.5Z"/>
+</vector>

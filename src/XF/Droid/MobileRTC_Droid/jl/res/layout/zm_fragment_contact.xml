@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/btnBack"
+        style="@style/ZmTitleBarAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:contentDescription="@string/zm_btn_back"
+        android:text="@string/zm_btn_cancel"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTitle"
+        style="@style/ZmTitleBarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zm_menu_send_app"
+        tools:layout_editor_absoluteY="16dp"
+        zoom:layout_constraintEnd_toEndOf="parent"
+        zoom:layout_constraintHorizontal_bias="0.5"
+        zoom:layout_constraintStart_toEndOf="@+id/btnBack"
+        zoom:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/zm_im_search_bar_bg"
+        zoom:layout_constraintBottom_toBottomOf="@+id/searchBarEditText"
+        zoom:layout_constraintEnd_toEndOf="parent"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toBottomOf="@id/btnBack"  />
+
+    <ImageView
+        android:id="@+id/searchBarImgSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/zm_ic_im_search"
+        tools:ignore="ContentDescription"
+        zoom:layout_constraintEnd_toStartOf="@+id/searchBarEditText"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <EditText
+        android:id="@+id/searchBarEditText"
+        style="@style/ZMEditText.GlobalSearch"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:minWidth="@dimen/zm_accessible_btn_min_size"
+        android:minHeight="@dimen/zm_accessible_btn_min_size"
+        android:layout_centerVertical="true"
+        android:hint="@string/zm_hint_search_im_18680"
+        android:imeOptions="actionDone"
+        android:textColorHint="@color/zm_v2_txt_secondary"
+        zoom:layout_constraintEnd_toStartOf="@id/searchBarClearBtn"
+        zoom:layout_constraintStart_toEndOf="@id/searchBarImgSearch"
+        zoom:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+    <Button
+        android:id="@+id/searchBarClearBtn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/zm_btn_clear_search_view"
+        android:contentDescription="@string/zm_description_mm_btn_clear_search_75317"
+        zoom:layout_constraintEnd_toEndOf="parent"
+
+        zoom:layout_constraintTop_toBottomOf="@id/btnBack" />
+
+
+    <us.zoom.uicommon.widget.recyclerview.ZMRecyclerView
+        android:id="@+id/contact_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/zm_margin_small_minus_size"
+        android:layout_marginTop="@dimen/zm_margin_small_size"
+        android:layout_marginRight="@dimen/zm_margin_small_minus_size"
+        zoom:autoHeight="true"
+        zoom:layout_constraintBottom_toBottomOf="parent"
+        zoom:layout_constraintEnd_toEndOf="parent"
+        zoom:layout_constraintStart_toStartOf="parent"
+        zoom:layout_constraintTop_toBottomOf="@id/view" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

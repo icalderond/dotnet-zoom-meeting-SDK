@@ -1,0 +1,19 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="16"
+    android:viewportHeight="16">
+  <path
+      android:pathData="M4.5,4C4.224,4 4,4.224 4,4.5C4,4.776 4.224,5 4.5,5H11.5C11.776,5 12,4.776 12,4.5C12,4.224 11.776,4 11.5,4H4.5Z"
+      android:fillColor="@color/zm_v2_btn_white_text_color"/>
+  <path
+      android:pathData="M4,8C4,7.724 4.224,7.5 4.5,7.5H11.5C11.776,7.5 12,7.724 12,8C12,8.276 11.776,8.5 11.5,8.5H4.5C4.224,8.5 4,8.276 4,8Z"
+      android:fillColor="@color/zm_v2_btn_white_text_color"/>
+  <path
+      android:pathData="M4.5,11C4.224,11 4,11.224 4,11.5C4,11.776 4.224,12 4.5,12H11.5C11.776,12 12,11.776 12,11.5C12,11.224 11.776,11 11.5,11H4.5Z"
+      android:fillColor="@color/zm_v2_btn_white_text_color"/>
+  <path
+      android:pathData="M1,3C1,1.343 2.343,0 4,0H12C13.657,0 15,1.343 15,3V13C15,14.657 13.657,16 12,16H4C2.343,16 1,14.657 1,13V3ZM4,1H12C13.105,1 14,1.895 14,3V13C14,14.105 13.105,15 12,15H4C2.895,15 2,14.105 2,13V3C2,1.895 2.895,1 4,1Z"
+      android:fillColor="@color/zm_v2_btn_white_text_color"
+      android:fillType="evenOdd"/>
+</vector>

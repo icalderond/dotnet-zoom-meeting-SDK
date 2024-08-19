@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zoom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="100dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="1dp"
+    android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/btnMuteChat"
+            style="@style/ZmSettingItem"
+            android:weightSum="1"
+            android:background="@color/zm_black" >
+
+            <TextView
+                android:id="@+id/txtChatMuteStatus"
+                style="@style/ZMTextView.SettingsItem"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/zm_padding_smallest"
+                android:gravity="left|center_vertical"
+                android:paddingRight="@dimen/zm_padding_smaller_size"
+                android:layout_weight="0.85"
+                android:text="@string/zm_turn_on_noti_478816"
+                tools:ignore="ContentDescription"
+                />
+
+            <ImageView
+                android:id="@+id/imgChatMuteStatus"
+                android:gravity="right|center_vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/zm_ic_chat_notification_on"
+                android:layout_marginRight="@dimen/zm_margin_smaller_size"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnOpenTeamChat"
+            style="@style/ZmSettingItem"
+            android:weightSum="1"
+            android:background="@color/zm_black" >
+
+            <TextView
+                android:id="@+id/txtOpenTeamChat"
+                style="@style/ZMTextView.SettingsItem"
+                android:textColor="@android:color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/zm_padding_smallest"
+                android:gravity="left|center_vertical"
+                android:paddingRight="@dimen/zm_padding_smaller_size"
+                android:layout_weight="0.8"
+                android:text="@string/zm_show_in_im_478816"
+                tools:ignore="ContentDescription"
+                />
+            <ImageView
+                android:id="@+id/imgOpenTeamChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|right"
+                android:src="@drawable/zm_ic_jump_to_team_chat"
+                android:layout_marginRight="@dimen/zm_margin_smaller_size"
+                tools:ignore="ContentDescription" />
+
+        </LinearLayout>
+
+</LinearLayout>

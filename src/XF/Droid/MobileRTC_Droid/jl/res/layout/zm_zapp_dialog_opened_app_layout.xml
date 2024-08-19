@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    app:cardBackgroundColor="@color/zm_v1_white"
+    app:cardCornerRadius="@dimen/zm_corner_smaller_size">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <us.zoom.uicommon.widget.view.ZMTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/zm_margin_small_size"
+            android:layout_marginTop="@dimen/zm_margin_medium_size"
+            android:layout_marginBottom="@dimen/zm_margin_medium_size"
+            android:text="OPENED"
+            android:textSize="@dimen/zm_font_small_size"
+            android:textColor="@color/zm_v1_black_50_alpha56"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/zapp_opened_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,15 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="28"
+    android:viewportHeight="28">
+  <path
+      android:pathData="M20,8.5C20,8.224 19.776,8 19.5,8C19.224,8 19,8.224 19,8.5V10.584L18.969,10.544C17.884,9.007 16.092,8.001 14.065,8.001C10.752,8.001 8.067,10.687 8.067,14C8.067,17.313 10.752,19.999 14.065,19.999C16.396,19.999 18.416,18.669 19.408,16.729C19.534,16.483 19.437,16.182 19.191,16.056C18.945,15.931 18.644,16.028 18.518,16.274C17.69,17.892 16.006,18.999 14.065,18.999C11.305,18.999 9.067,16.761 9.067,14C9.067,11.239 11.305,9.001 14.065,9.001C15.757,9.001 17.252,9.841 18.158,11.129L18.164,11.138L18.171,11.147L18.444,11.5H16C15.724,11.5 15.5,11.724 15.5,12C15.5,12.276 15.724,12.5 16,12.5H19.5C19.776,12.5 20,12.276 20,12V8.5Z"
+      android:fillColor="@color/zm_v2_webwb_refresh_icon"
+      android:fillAlpha="0.56"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M8,0L20,0A8,8 0,0 1,28 8L28,20A8,8 0,0 1,20 28L8,28A8,8 0,0 1,0 20L0,8A8,8 0,0 1,8 0z"
+      android:fillColor="@color/zm_v2_webwb_refresh_bg"
+      android:fillAlpha="0.09"/>
+</vector>
