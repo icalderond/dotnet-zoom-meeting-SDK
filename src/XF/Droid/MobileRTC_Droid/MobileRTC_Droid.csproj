@@ -69,18 +69,11 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Additions\DraftsAdapter.cs" />
-    <Compile Include="Additions\MMContentSearchFilesAdapter.cs" />
-    <Compile Include="Additions\MMContentSearchMessagesAdapter.cs" />
-    <Compile Include="Additions\MMMentionsListAdapter.cs" />
-    <Compile Include="Additions\MMTextBean.cs" />
-    <Compile Include="Additions\SigninHistoryAdapter.cs" />
-    <Compile Include="Additions\ZmProctoringGalleryRecyclerAdapter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Additions\AnnoMultiPageAdapter.cs" />
     <Compile Include="Additions\ZmCameraAngleComparator.cs" />
-    <Compile Include="Additions\ZmGalleryRecyclerAdapter.cs" />
     <Compile Include="Additions\ZoomQAQuestion.cs" />
+    <Compile Include="Additions\ZmGalleryRecyclerAdapter.cs" />
+    <Compile Include="Additions\AnnoMultiPageAdapter.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Jars\AboutJars.txt" />
