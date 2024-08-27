@@ -133,6 +133,8 @@
     <PackageReference Include="XAB.FlexboxLayout">
       <Version>3.0.0.2</Version>
     </PackageReference>
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.Core" Version="2.19.1" />
+    <PackageReference Include="Xam.Plugins.Android.ExoPlayer.UI" Version="2.19.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ZoomCommonLib\ZoomCommonLib.csproj" PrivateAssets="All">
